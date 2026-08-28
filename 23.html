@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#FFF8EC" />
+<title>My First 100 English Words — Animals</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='52' r='44' fill='%238B5E3C'/%3E%3Ccircle cx='36' cy='44' r='13' fill='white'/%3E%3Ccircle cx='64' cy='44' r='13' fill='white'/%3E%3Ccircle cx='38' cy='46' r='6' fill='%234A3428'/%3E%3Ccircle cx='62' cy='46' r='6' fill='%234A3428'/%3E%3Cpath d='M44 56 L56 56 L50 66 Z' fill='%23F59E3F'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FFF8EC',
+          ink: '#4A3428',
+          softink: '#8A7364',
+          orange: { DEFAULT: '#FF8A3D', dark: '#D96B1F', soft: '#FFE8D2' },
+          green:  { DEFAULT: '#5BBA6F', dark: '#3E9E55', soft: '#E3F6E8' },
+          teal:   { DEFAULT: '#3FA8B8', dark: '#2E8A99', soft: '#E0F3F6' },
+          yellow: { DEFAULT: '#FFC93C', soft: '#FFF3D1' },
+        },
+        fontFamily: {
+          display: ['"Baloo 2"', '"Baloo Bhaijaan 2"', 'sans-serif'],
+          ar: ['"Baloo Bhaijaan 2"', '"Baloo 2"', 'sans-serif'],
+        },
+        boxShadow: { card: '0 10px 30px -12px rgba(74,52,40,.20)' },
+      },
+    },
+  };
+</script>
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+<script>
+  Babel.registerPreset('tsx', {
+    presets: [
+      [Babel.availablePresets['typescript'], { allExtensions: true, isTSX: true }],
+      Babel.availablePresets['react'],
+    ],
+  });
+</script>
+<style>
+  * { -webkit-tap-highlight-color: transparent; }
+  html, body { overscroll-behavior-y: none; }
+  body {
+    font-family: 'Baloo 2', 'Baloo Bhaijaan 2', sans-serif;
+    color: #4A3428;
+    background-color: #FFF8EC;
+    background-image: radial-gradient(rgba(74,52,40,.055) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    -webkit-user-select: none; user-select: none;
+  }
+  .font-ar { font-family: 'Baloo Bhaijaan 2', 'Baloo 2', sans-serif; }
+  button { touch-action: manipulation; }
+
+  @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  @keyframes popIn { from{opacity:0;transform:scale(.92)} to{opacity:1;transform:scale(1)} }
+  @keyframes slideUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:none} }
+  @keyframes shake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(6px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)} }
+  @keyframes pulseSoft { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+  @keyframes starPop { 0%{transform:scale(0) rotate(-30deg);opacity:0} 60%{transform:scale(1.25) rotate(6deg);opacity:1} 100%{transform:scale(1) rotate(0)} }
+  @keyframes toastIn { from{opacity:0;transform:translateY(-12px)} to{opacity:1;transform:none} }
+  @keyframes twinkle { 0%,100%{opacity:.35;transform:scale(.8)} 50%{opacity:1;transform:scale(1.12)} }
+  @keyframes waveRing { from{transform:scale(1);opacity:.55} to{transform:scale(1.5);opacity:0} }
+
+  .anim-bob{animation:bob 3s ease-in-out infinite}
+  .anim-pop{animation:popIn .3s ease-out both}
+  .anim-slide{animation:slideUp .35s ease-out both}
+  .anim-shake{animation:shake .4s ease-out}
+  .anim-pulse-soft{animation:pulseSoft 1.6s ease-in-out infinite}
+  .anim-star{animation:starPop .55s cubic-bezier(.34,1.56,.64,1) both}
+  .anim-toast{animation:toastIn .25s ease-out}
+  .anim-screen{animation:slideUp .3s ease-out}
+  .anim-twinkle{animation:twinkle 1.4s ease-in-out infinite}
+  .wave-ring-o{position:absolute;inset:-2px;border-radius:9999px;border:3px solid rgba(240,105,28,.55);animation:waveRing 1.5s ease-out infinite;pointer-events:none}
+  .wave-ring-t{position:absolute;inset:-2px;border-radius:9999px;border:3px solid rgba(63,168,184,.55);animation:waveRing 1.5s ease-out infinite;pointer-events:none}
+  @media (prefers-reduced-motion: reduce) {
+    .anim-bob,.anim-pop,.anim-slide,.anim-shake,.anim-pulse-soft,.anim-star,.anim-toast,.anim-screen,.anim-twinkle,.wave-ring-o,.wave-ring-t{animation:none !important}
+  }
+  .boot { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;
+          font-family:'Baloo 2',sans-serif; color:#8A7364; font-weight:800; font-size:20px; }
+  .boot-ring { width:44px; height:44px; border-radius:50%; border:5px solid #F0E2C6; border-top-color:#FF8A3D; animation:spin 1s linear infinite; }
+  @keyframes spin { to{transform:rotate(360deg)} }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="boot">
+    <div class="boot-ring"></div>
+    <div>Loading Hoot…</div>
+  </div>
+</div>
+
+<script type="text/babel" data-presets="tsx">
+// =====================================================================
+// My First 100 English Words — STAGE 3: REAL ASSETS & AUDIO
+// (Contains Stage 1 + 2 + 3 — same data, same localStorage key)
+// =====================================================================
+const { useState, useEffect, useRef, useCallback } = React;
+
+// ------------------- data/types.ts -------------------
+interface Word {
+  id: string;
+  english: string;
+  arabic: string;
+  sentence: string;
+  sentenceArabic: string;
+  audioUrl?: string;
+  sentenceAudioUrl?: string;
+}
+interface CategoryMeta { id: string; level: number; nameEnglish: string; nameArabic: string; iconKey: string; }
+interface CategoryProgress {
+  wordsLearned: string[]; lessonStars: number; quizCompleted: boolean;
+  quizBestScore: number; quizStars: number; badge: boolean; completed: boolean;
+}
+interface AppProgress { version: number; categories: Record<string, CategoryProgress>; soundOn: boolean; }
+type QuizType = 'picture' | 'word' | 'listen' | 'translate' | 'complete';
+interface QuizQuestion { word: Word; type: QuizType; options: Word[]; }
+interface Point { x: number; y: number; }
+interface Flight { from: Point; to: Point; }
+
+// ------------------- data/words.ts -------------------
+const WORDS_ANIMALS: Word[] = [
+  { id: 'cat',      english: 'CAT',      arabic: 'قطة',  sentence: 'This is a cat.',      sentenceArabic: 'هذه قطة.' },
+  { id: 'dog',      english: 'DOG',      arabic: 'كلب',  sentence: 'This is a dog.',      sentenceArabic: 'هذا كلب.' },
+  { id: 'lion',     english: 'LION',     arabic: 'أسد',  sentence: 'This is a lion.',     sentenceArabic: 'هذا أسد.' },
+  { id: 'elephant', english: 'ELEPHANT', arabic: 'فيل',  sentence: 'This is an elephant.',sentenceArabic: 'هذا فيل.' },
+  { id: 'monkey',   english: 'MONKEY',   arabic: 'قرد',  sentence: 'This is a monkey.',   sentenceArabic: 'هذا قرد.' },
+  { id: 'bird',     english: 'BIRD',     arabic: 'طائر', sentence: 'This is a bird.',     sentenceArabic: 'هذا طائر.' },
+  { id: 'fish',     english: 'FISH',     arabic: 'سمكة', sentence: 'This is a fish.',     sentenceArabic: 'هذه سمكة.' },
+  { id: 'rabbit',   english: 'RABBIT',   arabic: 'أرنب', sentence: 'This is a rabbit.',   sentenceArabic: 'هذا أرنب.' },
+  { id: 'tiger',    english: 'TIGER',    arabic: 'نمر',  sentence: 'This is a tiger.',    sentenceArabic: 'هذا نمر.' },
+  { id: 'bear',     english: 'BEAR',     arabic: 'دب',   sentence: 'This is a bear.',     sentenceArabic: 'هذا دب.' },
+];
+
+// ------------------- data/categories.ts -------------------
+const CATEGORY_META: CategoryMeta[] = [
+  { id: 'animals', level: 1,  nameEnglish: 'Animals', nameArabic: 'الحيوانات', iconKey: 'paw' },
+  { id: 'food',    level: 2,  nameEnglish: 'Food',    nameArabic: 'الطعام',    iconKey: 'apple' },
+  { id: 'family',  level: 3,  nameEnglish: 'Family',  nameArabic: 'العائلة',   iconKey: 'family' },
+  { id: 'school',  level: 4,  nameEnglish: 'School',  nameArabic: 'المدرسة',   iconKey: 'pencil' },
+  { id: 'colors',  level: 5,  nameEnglish: 'Colors',  nameArabic: 'الألوان',   iconKey: 'palette' },
+  { id: 'home',    level: 6,  nameEnglish: 'Home',    nameArabic: 'المنزل',    iconKey: 'home' },
+  { id: 'clothes', level: 7,  nameEnglish: 'Clothes', nameArabic: 'الملابس',   iconKey: 'shirt' },
+  { id: 'toys',    level: 8,  nameEnglish: 'Toys',    nameArabic: 'الألعاب',   iconKey: 'kite' },
+  { id: 'body',    level: 9,  nameEnglish: 'Body',    nameArabic: 'الجسم',     iconKey: 'body' },
+  { id: 'actions', level: 10, nameEnglish: 'Actions', nameArabic: 'الأفعال',   iconKey: 'run' },
+];
+const WORDS_BY_CATEGORY: Record<string, Word[]> = { animals: WORDS_ANIMALS };
+const CATEGORY_STYLE: Record<string, { chip: string; icon: string }> = {
+  animals: { chip: 'bg-orange-soft', icon: 'text-orange' },
+  food:    { chip: 'bg-[#FCE3DC]',   icon: 'text-[#D95F43]' },
+  family:  { chip: 'bg-[#FBEBD2]',   icon: 'text-[#C98A2D]' },
+  school:  { chip: 'bg-[#DDEEE9]',   icon: 'text-[#3E8E68]' },
+  colors:  { chip: 'bg-[#FFF1CC]',   icon: 'text-[#C9A227]' },
+  home:    { chip: 'bg-[#E2EDD8]',   icon: 'text-[#6B8F3E]' },
+  clothes: { chip: 'bg-[#DFE7EE]',   icon: 'text-[#5B7E9E]' },
+  toys:    { chip: 'bg-[#FBE8D8]',   icon: 'text-[#C96B3F]' },
+  body:    { chip: 'bg-[#F9E0E4]',   icon: 'text-[#C95E74]' },
+  actions: { chip: 'bg-[#D8ECF0]',   icon: 'text-[#3E8391]' },
+};
+
+// ------------------- utils -------------------
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function sample<T>(arr: T[], n: number): T[] { return shuffle(arr).slice(0, n); }
+
+// ------------------- data/quiz.ts -------------------
+function buildQuestions(words: Word[], soundOn: boolean): QuizQuestion[] {
+  const speechOk = Speech.supported && soundOn;
+  const types: QuizType[] = ['picture', 'word', 'listen', 'translate', 'complete'];
+  return shuffle(words).map((w, i) => {
+    let type = types[i % types.length];
+    if (type === 'listen' && !speechOk) type = 'picture';
+    const options = shuffle([w, ...sample(words.filter(x => x.id !== w.id), 2)]);
+    return { word: w, type, options };
+  });
+}
+
+// ------------------- services/progressStore.ts -------------------
+const STORAGE_KEY = 'mf100_progress_v1';
+function defaultCategoryProgress(): CategoryProgress {
+  return { wordsLearned: [], lessonStars: 0, quizCompleted: false, quizBestScore: 0, quizStars: 0, badge: false, completed: false };
+}
+function defaultProgress(): AppProgress {
+  return { version: 1, categories: { animals: defaultCategoryProgress() }, soundOn: true };
+}
+const progressStore = {
+  load(): AppProgress {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return defaultProgress();
+      const p = JSON.parse(raw);
+      const base = defaultProgress();
+      const animals = { ...defaultCategoryProgress(), ...((p.categories && p.categories.animals) || {}) };
+      return { ...base, ...p, categories: { ...base.categories, ...(p.categories || {}), animals } };
+    } catch { return defaultProgress(); }
+  },
+  save(p: AppProgress): void {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch {}
+  },
+};
+
+// ------------------- services/sfx.ts (Stage 3) -------------------
+const Sfx = {
+  ctx: null as AudioContext | null,
+  master: null as GainNode | null,
+  enabled: true,
+  ensure(): AudioContext | null {
+    if (!this.ctx) {
+      const AC = (window as any).AudioContext || (window as any).webkitAudioContext;
+      if (AC) { try { this.ctx = new AC(); } catch { return null; } }
+    }
+    if (this.ctx && !this.master) {
+      try { this.master = this.ctx.createGain(); this.master.gain.value = 0.9; this.master.connect(this.ctx.destination); } catch {}
+    }
+    if (this.ctx && this.ctx.state === 'suspended' && this.ctx.resume) {
+      try { this.ctx.resume(); } catch {}
+    }
+    return this.ctx;
+  },
+  tone(freq: number, start: number, dur: number, type: string, vol: number) {
+    const ctx = this.ensure(); if (!ctx || !this.master) return;
+    try {
+      const o = ctx.createOscillator(); const g = ctx.createGain();
+      o.type = type; o.frequency.value = freq;
+      const t0 = ctx.currentTime + start;
+      g.gain.setValueAtTime(0.0001, t0);
+      g.gain.linearRampToValueAtTime(vol, t0 + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+      o.connect(g); g.connect(this.master);
+      o.start(t0); o.stop(t0 + dur + 0.05);
+    } catch {}
+  },
+  tap() { if (!this.enabled) return; this.tone(640, 0, .05, 'sine', .05); },
+  correct() {
+    if (!this.enabled) return;
+    this.tone(523.25, 0, .12, 'triangle', .13);
+    this.tone(659.25, .09, .12, 'triangle', .13);
+    this.tone(783.99, .18, .22, 'triangle', .13);
+    this.tone(1567.98, .24, .12, 'sine', .04);
+  },
+  star() {
+    if (!this.enabled) return;
+    this.tone(659.25, 0, .1, 'triangle', .12);
+    this.tone(880, .08, .1, 'triangle', .12);
+    this.tone(1318.5, .16, .3, 'triangle', .12);
+  },
+  retry() {
+    if (!this.enabled) return;
+    this.tone(392, 0, .16, 'sine', .06);
+    this.tone(329.63, .11, .2, 'sine', .06);
+  },
+  fanfare() {
+    if (!this.enabled) return;
+    this.tone(392, 0, .15, 'triangle', .12);
+    this.tone(523.25, .12, .15, 'triangle', .12);
+    this.tone(659.25, .24, .15, 'triangle', .12);
+    this.tone(783.99, .36, .5, 'triangle', .13);
+    this.tone(523.25, .36, .5, 'triangle', .09);
+    this.tone(659.25, .36, .5, 'triangle', .09);
+    this.tone(1046.5, .52, .25, 'sine', .05);
+    this.tone(1318.5, .6, .3, 'sine', .05);
+  },
+};
+
+// ------------------- services/speech.ts (Stage 3 pipeline) -------------------
+type TrackItem =
+  | { kind: 'tts'; text: string; rate?: number }
+  | { kind: 'file'; url: string; fallbackText?: string; fallbackRate?: number };
+
+const Speech = {
+  supported: typeof window !== 'undefined' && 'speechSynthesis' in window,
+  voice: null as SpeechSynthesisVoice | null,
+  _playing: false,
+  _subs: new Set<(v: boolean) => void>(),
+  _seq: 0,
+  _fileAudio: null as HTMLAudioElement | null,
+  _fileFinish: null as (() => void) | null,
+  get playing(): boolean { return this._playing; },
+  _set(v: boolean) {
+    if (this._playing !== v) { this._playing = v; this._subs.forEach(f => f(v)); }
+  },
+  subscribe(fn: (v: boolean) => void): () => void {
+    this._subs.add(fn);
+    return () => { this._subs.delete(fn); };
+  },
+  init() {
+    if (!this.supported) return;
+    const pick = () => { this.voice = this._pickBest(); };
+    pick();
+    window.speechSynthesis.onvoiceschanged = pick;
+  },
+  _pickBest(): SpeechSynthesisVoice | null {
+    if (!this.supported) return null;
+    let vs: SpeechSynthesisVoice[] = [];
+    try { vs = window.speechSynthesis.getVoices(); } catch { return null; }
+    const en = vs.filter(v => /^en([-_]|$)/i.test(v.lang));
+    if (!en.length) return null;
+    const score = (v: SpeechSynthesisVoice) => {
+      const n = v.name.toLowerCase(); let s = 0;
+      if (/natural|neural/.test(n)) s += 8;
+      if (/google (us|uk) english/.test(n)) s += 7;
+      if (/samantha/.test(n)) s += 6;
+      if (/microsoft (aria|jenny|guy|ana)/.test(n)) s += 5;
+      if (/karen|moira|tessa|serena/.test(n)) s += 4;
+      if (/zira|david|mark/.test(n)) s += 3;
+      if (/english/.test(n)) s += 1;
+      return s;
+    };
+    let best = en[0];
+    for (const v of en) if (score(v) > score(best)) best = v;
+    return best;
+  },
+  cancel() {
+    this._seq++;
+    if (this._fileAudio) {
+      try { this._fileAudio.pause(); } catch {}
+      try { (this._fileAudio as HTMLAudioElement).src = ''; } catch {}
+    }
+    if (this._fileFinish) { const f = this._fileFinish; this._fileFinish = null; f(); }
+    if (this.supported) { try { window.speechSynthesis.cancel(); } catch {} }
+    this._set(false);
+  },
+  _playFile(url: string, seq: number): Promise<boolean> {
+    return new Promise(resolve => {
+      let done = false;
+      const finish = (ok: boolean) => {
+        if (done) return; done = true;
+        this._fileAudio = null; this._fileFinish = null;
+        resolve(ok);
+      };
+      try {
+        const el = new Audio(url);
+        this._fileAudio = el; this._fileFinish = () => finish(false);
+        el.onended = () => finish(true);
+        el.onerror = () => finish(false);
+        el.onplay = () => { if (seq === this._seq) this._set(true); };
+        el.play().catch(() => finish(false));
+      } catch { finish(false); }
+    });
+  },
+  _speakOne(item: { text: string; rate?: number }, seq: number): Promise<void> {
+    return new Promise(resolve => {
+      if (!this.supported || seq !== this._seq) return resolve();
+      let done = false; let timer = 0;
+      const finish = () => { if (done) return; done = true; if (timer) window.clearTimeout(timer); resolve(); };
+      try {
+        const u = new SpeechSynthesisUtterance(item.text);
+        if (this.voice) u.voice = this.voice;
+        u.lang = this.voice ? this.voice.lang : 'en-US';
+        u.rate = item.rate != null ? item.rate : 0.85;
+        u.pitch = 1.05;
+        u.onend = finish; u.onerror = finish;
+        timer = window.setTimeout(finish, Math.max(2500, item.text.length * 150));
+        window.speechSynthesis.speak(u);
+      } catch { finish(); }
+    });
+  },
+  async _run(track: TrackItem[], seq: number) {
+    for (const item of track) {
+      if (seq !== this._seq) return;
+      if (item.kind === 'file') {
+        const ok = await this._playFile(item.url, seq);
+        if (seq !== this._seq) return;
+        if (!ok && item.fallbackText && this.supported) {
+          await this._speakOne({ text: item.fallbackText, rate: item.fallbackRate }, seq);
+        }
+      } else {
+        await this._speakOne(item, seq);
+      }
+    }
+    if (seq === this._seq) this._set(false);
+  },
+  play(track: TrackItem[]): boolean {
+    if (!track.length) return false;
+    const hasFile = track.some(t => t.kind === 'file');
+    if (!this.supported && !hasFile) return false;
+    this.cancel();
+    const seq = ++this._seq;
+    this._set(true);
+    window.setTimeout(() => { if (seq === this._seq) this._run(track, seq); }, 50);
+    return true;
+  },
+  speak(text: string, opts: { rate?: number } = {}): boolean {
+    return this.play([{ kind: 'tts', text, rate: opts.rate }]);
+  },
+  sayWord(word: Word): boolean {
+    const track: TrackItem[] = word.audioUrl
+      ? [{ kind: 'file', url: word.audioUrl, fallbackText: word.english, fallbackRate: 0.72 }]
+      : [{ kind: 'tts', text: word.english, rate: 0.72 }];
+    return this.play(track);
+  },
+  sayWordAndSentence(word: Word): boolean {
+    const track: TrackItem[] = [];
+    if (word.audioUrl) track.push({ kind: 'file', url: word.audioUrl, fallbackText: word.english, fallbackRate: 0.72 });
+    else track.push({ kind: 'tts', text: word.english, rate: 0.72 });
+    if (word.sentenceAudioUrl) track.push({ kind: 'file', url: word.sentenceAudioUrl, fallbackText: word.sentence, fallbackRate: 0.86 });
+    else track.push({ kind: 'tts', text: word.sentence, rate: 0.86 });
+    return this.play(track);
+  },
+};
+function useSpeechPlaying(): boolean {
+  const [playing, setPlaying] = useState(Speech.playing);
+  useEffect(() => Speech.subscribe(setPlaying), []);
+  return playing;
+}
+function prefersReducedMotion(): boolean {
+  try { return !!window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+  catch { return false; }
+}
+
+// ------------------- components/icons.tsx -------------------
+function IconSpeaker({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3z" /><path d="M15.5 8.7a4.7 4.7 0 0 1 0 6.6M18 6.2a8.2 8.2 0 0 1 0 11.6" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round" /></svg>);
+}
+function IconSpeakerOff({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3z" /><path d="M15.5 9.5l6 5M21.5 9.5l-6 5" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round" /></svg>);
+}
+function IconMic({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor" /><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round" /></svg>);
+}
+function IconLock({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><rect x="5" y="10" width="14" height="10" rx="3" fill="currentColor" /><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="2.4" fill="none" strokeLinecap="round" /><circle cx="12" cy="15" r="1.8" fill="#fff" /></svg>);
+}
+function IconUnlock({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><rect x="5" y="10.5" width="14" height="10" rx="3" fill="currentColor" /><path d="M8 10.5V7a4 4 0 0 1 7.7-1.5" stroke="currentColor" strokeWidth="2.4" fill="none" strokeLinecap="round" /><circle cx="12" cy="15.5" r="1.8" fill="#fff" /></svg>);
+}
+function IconStar({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path fill="currentColor" d="M12 2.6l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.2l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z" /></svg>);
+}
+function IconCheck({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path d="M4.5 12.5l5 5 10-11" stroke="currentColor" strokeWidth="3.4" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>);
+}
+function IconArrowLeft({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>);
+}
+function IconArrowRight({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>);
+}
+function IconChevronRight({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path d="M9.5 5l7 7-7 7" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>);
+}
+function IconPaw({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><ellipse cx="12" cy="16.6" rx="4.8" ry="3.9" /><ellipse cx="5.9" cy="11.4" rx="2.1" ry="2.7" /><ellipse cx="18.1" cy="11.4" rx="2.1" ry="2.7" /><ellipse cx="9" cy="7.6" rx="2.1" ry="2.8" /><ellipse cx="15" cy="7.6" rx="2.1" ry="2.8" /></svg>);
+}
+function IconTrophy({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}>
+    <path fill="currentColor" d="M7 3h10v5a5 5 0 0 1-10 0V3z" />
+    <path d="M7 5H4.5v1.2A3.5 3.5 0 0 0 7.6 9.5" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
+    <path d="M17 5h2.5v1.2a3.5 3.5 0 0 1-3.1 3.3" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
+    <path d="M12 13v4" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+    <rect x="8.5" y="17" width="7" height="3.5" rx="1.2" fill="currentColor" />
+  </svg>);
+}
+function IconPlay({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><path d="M8 5.2v13.6L19 12z" /></svg>);
+}
+function IconSparkle({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className}><path fill="currentColor" d="M12 2l2.1 7.9L22 12l-7.9 2.1L12 22l-2.1-7.9L2 12l7.9-2.1z" /></svg>);
+}
+function IconRefresh({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 5v5h-5" /><path d="M19.6 10a8 8 0 1 0 .4 3" /></svg>);
+}
+function IconEye({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z" strokeLinejoin="round" /><circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none" /></svg>);
+}
+function IconBody({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><circle cx="12" cy="6.8" r="3.6" /><path d="M4.5 21v-1a7.5 7.5 0 0 1 15 0v1z" /></svg>);
+}
+function IconApple({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><path d="M12 7c-1-1.8-3-2.4-4.6-1.6C4.6 6.6 3.6 9.6 4.6 13c.9 3.1 3 6 5.1 6 .8 0 1.1-.4 2.3-.4s1.5.4 2.3.4c2.1 0 4.2-2.9 5.1-6 1-3.4 0-6.4-2.8-7.6C15 4.6 13 5.2 12 7z" /><path d="M12.5 6.2c.3-2 1.8-3.4 3.7-3.7.2 2-1 3.7-3.7 3.7z" /></svg>);
+}
+function IconFamily({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><circle cx="8" cy="6.5" r="3.2" /><path d="M2.5 20v-2.2a5.5 5.5 0 0 1 11 0V20z" /><circle cx="16.8" cy="8" r="2.6" /><path d="M13.5 20v-1.6a4.5 4.5 0 0 1 8 0V20z" /></svg>);
+}
+function IconPencil({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><path d="M4 20l1.3-4.5L15.6 5.2a2.2 2.2 0 0 1 3.1 0l.1.1a2.2 2.2 0 0 1 0 3.1L8.5 18.7 4 20z" /><path d="M16.9 3.9l1.4-1.4a1.6 1.6 0 0 1 2.2 2.2l-1.4 1.4z" /></svg>);
+}
+function IconPalette({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2.2-.9 2.2-1.9 0-1.5-1.4-1.7-1.4-2.9 0-1.1.9-2 2.1-2h1.6A5.5 5.5 0 0 0 22 8.7C22 5.3 17.4 3 12 3z" /><circle cx="7.6" cy="9" r="1.5" fill="#fff" /><circle cx="11.6" cy="6.8" r="1.5" fill="#fff" /><circle cx="15.8" cy="8.4" r="1.5" fill="#fff" /></svg>);
+}
+function IconHome({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><path d="M4 11.2L12 4l8 7.2V20a1.4 1.4 0 0 1-1.4 1.4H14.5v-6.3h-5v6.3H5.4A1.4 1.4 0 0 1 4 20z" /></svg>);
+}
+function IconShirt({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><path d="M8.4 3L12 4.8 15.6 3l4.9 2.9-1.8 3.6-1.7-.9V21H7V8.6l-1.7.9L3.5 5.9z" /></svg>);
+}
+function IconKite({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="currentColor"><path d="M12 2.5L19.5 10 12 17.5 4.5 10z" /><path d="M11.2 18.6c-.8 1.6-2.2 2.7-4.2 3.4" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" /></svg>);
+}
+function IconRun({ className = '' }: { className?: string }) {
+  return (<svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="14.8" cy="4.8" r="2.1" fill="currentColor" stroke="none" /><path d="M14 9.5l-2.6 2.6 1.9 2.1-2.8 4.6" /><path d="M14 9.5l3.2 1.9 2.8-.9" /><path d="M11.4 12.1L8 13l-2 3" /><path d="M13.3 14.2l3 1.6.9 3.7" /><path d="M2.5 8.5h4M2 12.5h3" /></svg>);
+}
+const CATEGORY_ICONS: Record<string, React.ReactNode> = {
+  paw: <IconPaw className="w-7 h-7" />, apple: <IconApple className="w-7 h-7" />,
+  family: <IconFamily className="w-7 h-7" />, pencil: <IconPencil className="w-7 h-7" />,
+  palette: <IconPalette className="w-7 h-7" />, home: <IconHome className="w-7 h-7" />,
+  shirt: <IconShirt className="w-7 h-7" />, kite: <IconKite className="w-7 h-7" />,
+  body: <IconBody className="w-7 h-7" />, run: <IconRun className="w-7 h-7" />,
+};
+
+// ------------------- components/illustrations/Animals.tsx (Stage 3) -------------------
+const INK = '#4A3428';
+const ANIMAL_BG: Record<string, string> = {
+  cat: '#FDEBD9', dog: '#E3F1E0', lion: '#FFE4BF', elephant: '#E6EDF2', monkey: '#F9E4D7',
+  bird: '#DDF0EB', fish: '#FBE9E6', rabbit: '#E9F0DC', tiger: '#FFDFB8', bear: '#F1E6D0',
+};
+function Ground({ cy = 206, rx = 62 }: { cy?: number; rx?: number }) {
+  return <ellipse cx="120" cy={cy} rx={rx} ry="11" fill="rgba(74,52,40,.09)" />;
+}
+function Eyes({ lx, rx, y }: { lx: number; rx: number; y: number }) {
+  return (<g>
+    <circle cx={lx} cy={y} r="11" fill={INK} /><circle cx={rx} cy={y} r="11" fill={INK} />
+    <circle cx={lx + 3.5} cy={y - 3.5} r="3.4" fill="#fff" /><circle cx={rx + 3.5} cy={y - 3.5} r="3.4" fill="#fff" />
+  </g>);
+}
+function Blush({ lx, rx, y, o = .4 }: { lx: number; rx: number; y: number; o?: number }) {
+  return (<g fill="#F58A8A" opacity={o}><ellipse cx={lx} cy={y} rx="8" ry="5.5" /><ellipse cx={rx} cy={y} rx="8" ry="5.5" /></g>);
+}
+function WS({ x, y, w = 11, h = 8 }: { x: number; y: number; w?: number; h?: number }) {
+  return <path d={`M${x - w} ${y} Q${x - w / 2} ${y + h} ${x} ${y} Q${x + w / 2} ${y + h} ${x + w} ${y}`} stroke={INK} strokeWidth="4" strokeLinecap="round" fill="none" />;
+}
+function CatArt() {
+  return (<g>
+    <Ground cy={206} rx={62} />
+    <path d="M78 208 Q78 164 120 164 Q162 164 162 208 Z" fill="#FBD3B4" />
+    <path d="M60 92 L46 28 L110 60 Z" fill="#F59E3F" stroke="#F59E3F" strokeWidth="10" strokeLinejoin="round" />
+    <path d="M180 92 L194 28 L130 60 Z" fill="#F59E3F" stroke="#F59E3F" strokeWidth="10" strokeLinejoin="round" />
+    <path d="M66 76 L58 42 L94 62 Z" fill="#F4A9B8" strokeLinejoin="round" />
+    <path d="M174 76 L182 42 L146 62 Z" fill="#F4A9B8" strokeLinejoin="round" />
+    <circle cx="120" cy="128" r="72" fill="#F59E3F" />
+    <path d="M103 64 q2 10 0 18 M120 60 q2 12 0 22 M137 64 q-2 10 0 18" stroke="#DE8326" strokeWidth="7" strokeLinecap="round" fill="none" />
+    <path d="M50 128 l-12 -6 12 -9 M190 128 l12 -6 -12 -9" stroke="#DE8326" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <Eyes lx={94} rx={146} y={118} />
+    <ellipse cx="120" cy="152" rx="30" ry="21" fill="#FBD3B4" />
+    <path d="M110 141 L130 141 L120 152 Z" fill="#F4A9B8" stroke="#F4A9B8" strokeWidth="5" strokeLinejoin="round" />
+    <path d="M120 152 v4" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+    <WS x={120} y={161} w={12} h={8} />
+    <path d="M40 144 h22 M43 157 q12 4 20 1 M200 144 h-22 M197 157 q-12 4 -20 1" stroke={INK} strokeWidth="3.5" strokeLinecap="round" fill="none" />
+    <Blush lx={74} rx={166} y={146} />
+  </g>);
+}
+function DogArt() {
+  return (<g>
+    <Ground cy={206} rx={64} />
+    <path d="M70 60 C38 58 28 102 35 140 C39 161 63 163 71 145 C79 112 80 82 70 60 Z" fill="#8C5A33" />
+    <path d="M170 60 C202 58 212 102 205 140 C201 161 177 163 169 145 C161 112 160 82 170 60 Z" fill="#8C5A33" />
+    <path d="M63 78 C48 82 46 110 50 132 C52 143 61 143 64 131 C69 108 68 88 63 78 Z" fill="#A5714A" />
+    <path d="M177 78 C192 82 194 110 190 132 C188 143 179 143 176 131 C171 108 172 88 177 78 Z" fill="#A5714A" />
+    <circle cx="120" cy="126" r="72" fill="#E8B87D" />
+    <path d="M86 99 q7 -5 14 -1 M140 98 q7 -4 14 1" stroke="#C8965B" strokeWidth="5" strokeLinecap="round" fill="none" />
+    <Eyes lx={94} rx={146} y={114} />
+    <ellipse cx="120" cy="156" rx="36" ry="26" fill="#F7E3C3" />
+    <path d="M108 144 L132 144 L120 157 Z" fill="#4A3428" stroke="#4A3428" strokeWidth="5" strokeLinejoin="round" />
+    <path d="M120 157 v3" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+    <path d="M106 162 Q113 169 120 162 Q127 169 134 162" stroke={INK} strokeWidth="4" strokeLinecap="round" fill="none" />
+    <ellipse cx="120" cy="175" rx="8" ry="10" fill="#EF8B8B" />
+    <path d="M120 168 v14" stroke="#E06A6A" strokeWidth="2" strokeLinecap="round" />
+    <Blush lx={76} rx={164} y={142} />
+  </g>);
+}
+function LionArt() {
+  const outer = Array.from({ length: 12 }).map((_, i) => {
+    const a = i * 30 * Math.PI / 180;
+    return <circle key={i} cx={120 + 82 * Math.cos(a)} cy={128 + 82 * Math.sin(a)} r="28" fill="#CE7420" />;
+  });
+  const inner = Array.from({ length: 8 }).map((_, i) => {
+    const a = (i * 45 + 22) * Math.PI / 180;
+    return <circle key={i} cx={120 + 62 * Math.cos(a)} cy={128 + 62 * Math.sin(a)} r="20" fill="#E0812F" />;
+  });
+  return (<g>
+    <Ground cy={212} rx={70} />
+    {outer}{inner}
+    <circle cx="86" cy="72" r="16" fill="#E8B04B" /><circle cx="154" cy="72" r="16" fill="#E8B04B" />
+    <circle cx="86" cy="72" r="8" fill="#F5C05A" /><circle cx="154" cy="72" r="8" fill="#F5C05A" />
+    <circle cx="120" cy="128" r="62" fill="#F5C05A" />
+    <Eyes lx={98} rx={142} y={116} />
+    <ellipse cx="120" cy="150" rx="30" ry="21" fill="#FCE3B0" />
+    <path d="M111 139 L129 139 L120 150 Z" fill="#8C5A33" stroke="#8C5A33" strokeWidth="5" strokeLinejoin="round" />
+    <path d="M120 150 v4" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+    <WS x={120} y={158} w={11} h={7} />
+    <Blush lx={90} rx={150} y={140} o={.45} />
+  </g>);
+}
+function ElephantArt() {
+  return (<g>
+    <Ground cy={208} rx={66} />
+    <circle cx="50" cy="108" r="46" fill="#8F9BAE" /><circle cx="190" cy="108" r="46" fill="#8F9BAE" />
+    <circle cx="52" cy="108" r="29" fill="#F2C4CB" /><circle cx="188" cy="108" r="29" fill="#F2C4CB" />
+    <circle cx="120" cy="118" r="70" fill="#A3AEBF" />
+    <path d="M120 112 Q110 148 116 176 Q122 202 148 200 Q166 198 164 184" stroke="#8F9BAE" strokeWidth="26" strokeLinecap="round" fill="none" />
+    <path d="M112 130 Q106 152 110 172" stroke="#A3AEBF" strokeWidth="5" strokeLinecap="round" fill="none" opacity=".7" />
+    <ellipse cx="157" cy="193" rx="4.5" ry="6" fill="#6E7A8C" transform="rotate(28 157 193)" />
+    <path d="M97 154 q-8 16 0 27 q10 -6 9 -23 z" fill="#F7F1E3" />
+    <path d="M143 154 q8 16 0 27 q-10 -6 -9 -23 z" fill="#F7F1E3" />
+    <Eyes lx={92} rx={148} y={104} />
+    <Blush lx={74} rx={166} y={134} o={.35} />
+  </g>);
+}
+function MonkeyArt() {
+  return (<g>
+    <Ground cy={206} rx={62} />
+    <circle cx="46" cy="112" r="27" fill="#8C5A33" /><circle cx="194" cy="112" r="27" fill="#8C5A33" />
+    <circle cx="46" cy="112" r="14" fill="#E8C39A" /><circle cx="194" cy="112" r="14" fill="#E8C39A" />
+    <circle cx="120" cy="124" r="72" fill="#8C5A33" />
+    <path d="M108 56 q-4 -16 6 -22 q2 12 -2 20 z M120 52 q0 -18 10 -22 q0 14 -6 20 z M132 56 q2 -16 12 -18 q-2 12 -8 18 z" fill="#74492A" />
+    <circle cx="94" cy="104" r="30" fill="#E8C39A" /><circle cx="146" cy="104" r="30" fill="#E8C39A" />
+    <ellipse cx="120" cy="148" rx="48" ry="34" fill="#E8C39A" />
+    <Eyes lx={100} rx={140} y={102} />
+    <ellipse cx="112" cy="132" rx="4.5" ry="6" fill="#74492A" /><ellipse cx="128" cy="132" rx="4.5" ry="6" fill="#74492A" />
+    <path d="M104 150 q16 14 32 0" stroke={INK} strokeWidth="4.5" strokeLinecap="round" fill="none" />
+    <Blush lx={86} rx={154} y={128} o={.45} />
+  </g>);
+}
+function BirdArt() {
+  return (<g>
+    <Ground cy={208} rx={58} />
+    <path d="M56 116 Q18 112 24 150 Q28 178 58 168 Q66 138 56 116 Z" fill="#2E8A99" />
+    <path d="M184 116 Q222 112 216 150 Q212 178 182 168 Q174 138 184 116 Z" fill="#2E8A99" />
+    <path d="M34 140 q10 -4 18 0 M206 140 q-10 -4 -18 0" stroke="#3FA8B8" strokeWidth="4" strokeLinecap="round" fill="none" />
+    <circle cx="120" cy="124" r="70" fill="#3FA8B8" />
+    <path d="M108 58 q-8 -18 2 -26 M122 54 q-2 -20 12 -24 M136 60 q2 -16 14 -18" stroke="#2E8A99" strokeWidth="8" strokeLinecap="round" fill="none" />
+    <ellipse cx="120" cy="152" rx="40" ry="30" fill="#C4E8ED" />
+    <Eyes lx={100} rx={140} y={104} />
+    <path d="M108 124 L136 124 L122 142 Z" fill="#F59E3F" stroke="#F59E3F" strokeWidth="6" strokeLinejoin="round" />
+    <Blush lx={84} rx={156} y={126} o={.4} />
+  </g>);
+}
+function FishArt() {
+  return (<g>
+    <circle cx="196" cy="62" r="7" fill="none" stroke="#8FC9BE" strokeWidth="3.5" />
+    <circle cx="213" cy="44" r="5" fill="none" stroke="#8FC9BE" strokeWidth="3.5" />
+    <circle cx="188" cy="32" r="4" fill="none" stroke="#8FC9BE" strokeWidth="3" />
+    <path d="M164 120 L212 90 L200 120 L212 150 Z" fill="#D95F43" />
+    <path d="M92 76 Q108 44 140 52 Q118 60 112 78 Z" fill="#D95F43" />
+    <ellipse cx="108" cy="120" rx="66" ry="48" fill="#F2704F" />
+    <ellipse cx="104" cy="140" rx="40" ry="22" fill="#FBAF8E" />
+    <path d="M118 126 q18 -8 30 0 q-10 12 -30 6 z" fill="#D95F43" />
+    <path d="M138 100 q10 10 0 20 M152 112 q8 8 0 16" stroke="#FBAF8E" strokeWidth="5" strokeLinecap="round" fill="none" />
+    <circle cx="74" cy="106" r="11" fill={INK} /><circle cx="77.5" cy="102.5" r="3.6" fill="#fff" />
+    <path d="M50 126 q7 8 15 5" stroke={INK} strokeWidth="4" strokeLinecap="round" fill="none" />
+    <circle cx="40" cy="100" r="4" fill="none" stroke="#8FC9BE" strokeWidth="3" />
+  </g>);
+}
+function RabbitArt() {
+  return (<g>
+    <Ground cy={208} rx={60} />
+    <ellipse cx="88" cy="54" rx="19" ry="48" fill="#EAE4D6" transform="rotate(-8 88 54)" />
+    <ellipse cx="152" cy="54" rx="19" ry="48" fill="#EAE4D6" transform="rotate(8 152 54)" />
+    <ellipse cx="88" cy="58" rx="9" ry="35" fill="#F4A9B8" transform="rotate(-8 88 58)" />
+    <ellipse cx="152" cy="58" rx="9" ry="35" fill="#F4A9B8" transform="rotate(8 152 58)" />
+    <circle cx="120" cy="142" r="66" fill="#EAE4D6" />
+    <path d="M110 82 q5 -14 10 -3 q5 -14 10 -2" stroke="#EAE4D6" strokeWidth="7" strokeLinecap="round" fill="none" />
+    <Eyes lx={96} rx={144} y={134} />
+    <ellipse cx="120" cy="158" rx="22" ry="15" fill="#F7F3E8" />
+    <path d="M113 149 L127 149 L120 158 Z" fill="#F093A9" stroke="#F093A9" strokeWidth="4.5" strokeLinejoin="round" />
+    <path d="M120 158 v4" stroke={INK} strokeWidth="3.5" strokeLinecap="round" />
+    <rect x="113" y="162" width="14" height="10" rx="3" fill="#FFFFFF" stroke="#CFC8B8" strokeWidth="2" />
+    <path d="M120 162 v10" stroke="#CFC8B8" strokeWidth="2" />
+    <path d="M62 158 h18 M66 170 q10 3 16 1 M178 158 h-18 M174 170 q-10 3 -16 1" stroke="#B8B0A2" strokeWidth="3" strokeLinecap="round" fill="none" />
+    <Blush lx={82} rx={158} y={154} />
+  </g>);
+}
+function TigerArt() {
+  return (<g>
+    <Ground cy={206} rx={62} />
+    <path d="M78 208 Q78 164 120 164 Q162 164 162 208 Z" fill="#FFF3DE" />
+    <path d="M60 92 L46 28 L110 60 Z" fill="#F59E3F" stroke="#F59E3F" strokeWidth="10" strokeLinejoin="round" />
+    <path d="M180 92 L194 28 L130 60 Z" fill="#F59E3F" stroke="#F59E3F" strokeWidth="10" strokeLinejoin="round" />
+    <path d="M66 76 L58 42 L94 62 Z" fill="#4A3428" strokeLinejoin="round" />
+    <path d="M174 76 L182 42 L146 62 Z" fill="#4A3428" strokeLinejoin="round" />
+    <circle cx="120" cy="128" r="72" fill="#F59E3F" />
+    <path d="M120 62 v20 M102 66 q2 10 0 18 M138 66 q-2 10 0 18" stroke="#4A3428" strokeWidth="8" strokeLinecap="round" fill="none" />
+    <path d="M48 124 h20 M50 144 h18 M192 124 h-20 M190 144 h-18" stroke="#4A3428" strokeWidth="7" strokeLinecap="round" />
+    <Eyes lx={94} rx={146} y={120} />
+    <ellipse cx="120" cy="155" rx="33" ry="24" fill="#FFF3DE" />
+    <path d="M110 145 L130 145 L120 156 Z" fill="#E86A8A" stroke="#E86A8A" strokeWidth="5" strokeLinejoin="round" />
+    <path d="M120 156 v4" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+    <WS x={120} y={164} w={12} h={8} />
+    <Blush lx={72} rx={168} y={148} o={.3} />
+  </g>);
+}
+function BearArt() {
+  return (<g>
+    <Ground cy={208} rx={64} />
+    <circle cx="62" cy="66" r="27" fill="#A9744F" /><circle cx="178" cy="66" r="27" fill="#A9744F" />
+    <circle cx="62" cy="66" r="14" fill="#D9A97C" /><circle cx="178" cy="66" r="14" fill="#D9A97C" />
+    <circle cx="120" cy="128" r="72" fill="#A9744F" />
+    <Eyes lx={95} rx={145} y={116} />
+    <ellipse cx="120" cy="156" rx="38" ry="28" fill="#E9D3B4" />
+    <ellipse cx="120" cy="147" rx="12" ry="9" fill="#4A3428" />
+    <path d="M120 156 v4" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+    <path d="M108 163 q12 9 24 0" stroke={INK} strokeWidth="4" strokeLinecap="round" fill="none" />
+    <Blush lx={82} rx={158} y={144} />
+  </g>);
+}
+const ANIMAL_ART: Record<string, () => JSX.Element> = {
+  cat: CatArt, dog: DogArt, lion: LionArt, elephant: ElephantArt, monkey: MonkeyArt,
+  bird: BirdArt, fish: FishArt, rabbit: RabbitArt, tiger: TigerArt, bear: BearArt,
+};
+function AnimalArt({ id, className = '' }: { id: string; className?: string }) {
+  const Art = ANIMAL_ART[id];
+  return (
+    <svg viewBox="0 0 240 240" className={className} role="img" aria-label={id}>
+      <circle cx="120" cy="120" r="116" fill={ANIMAL_BG[id] || '#FDEBD9'} />
+      <circle cx="106" cy="108" r="94" fill="rgba(255,255,255,.20)" />
+      {Art ? <Art /> : null}
+    </svg>
+  );
+}
+
+// ------------------- components/Hoot.tsx (Stage 3) -------------------
+type HootExpr = 'normal' | 'happy' | 'cheer' | 'wink' | 'wave' | 'think';
+function HootArt({ expression = 'normal', className = '' }: { expression?: HootExpr; className?: string }) {
+  const ink = '#4A3428', body = '#8B5E3C', dark = '#74492A', belly = '#F0DAB6', beak = '#F59E3F';
+  const raisedWings = (
+    <g fill={dark}>
+      <path d="M34 98 Q8 62 34 42 Q60 58 56 98 Z" />
+      <path d="M166 98 Q192 62 166 42 Q140 58 144 98 Z" />
+    </g>
+  );
+  const sideWings = (
+    <g>
+      <g fill={dark}>
+        <ellipse cx="38" cy="122" rx="17" ry="34" transform="rotate(16 38 122)" />
+        <ellipse cx="162" cy="122" rx="17" ry="34" transform="rotate(-16 162 122)" />
+      </g>
+      <path d="M28 126 q8 8 16 4 M26 140 q8 8 16 4 M172 126 q-8 8 -16 4 M174 140 q-8 8 -16 4" stroke={body} strokeWidth="3" strokeLinecap="round" fill="none" opacity=".8" />
+    </g>
+  );
+  const waveWings = (
+    <g fill={dark}>
+      <ellipse cx="38" cy="122" rx="17" ry="34" transform="rotate(16 38 122)" />
+      <path d="M166 98 Q192 62 166 42 Q140 58 144 98 Z" />
+    </g>
+  );
+  const wings = expression === 'cheer' ? raisedWings : expression === 'wave' ? waveWings : sideWings;
+  const happy = expression === 'happy' || expression === 'cheer';
+  const eyes = happy ? (
+    <g stroke={ink} strokeWidth="7" strokeLinecap="round" fill="none">
+      <path d="M52 92 q16 -18 32 0" /><path d="M116 92 q16 -18 32 0" />
+    </g>
+  ) : expression === 'wink' ? (
+    <g>
+      <circle cx="68" cy="92" r="26" fill="#fff" /><circle cx="72" cy="95" r="11.5" fill={ink} /><circle cx="76" cy="90" r="4" fill="#fff" />
+      <path d="M116 94 q16 -16 32 0" stroke={ink} strokeWidth="7" strokeLinecap="round" fill="none" />
+    </g>
+  ) : expression === 'think' ? (
+    <g>
+      <circle cx="68" cy="92" r="26" fill="#fff" /><circle cx="132" cy="92" r="26" fill="#fff" />
+      <circle cx="75" cy="86" r="11.5" fill={ink} /><circle cx="139" cy="86" r="11.5" fill={ink} />
+      <circle cx="79" cy="81" r="4" fill="#fff" /><circle cx="143" cy="81" r="4" fill="#fff" />
+      <path d="M116 66 q18 -8 34 0" stroke={ink} strokeWidth="5" strokeLinecap="round" fill="none" />
+    </g>
+  ) : (
+    <g>
+      <circle cx="68" cy="92" r="26" fill="#fff" /><circle cx="132" cy="92" r="26" fill="#fff" />
+      <circle cx="72" cy="95" r="11.5" fill={ink} /><circle cx="128" cy="95" r="11.5" fill={ink} />
+      <circle cx="76" cy="90" r="4" fill="#fff" /><circle cx="132" cy="90" r="4" fill="#fff" />
+    </g>
+  );
+  return (
+    <svg viewBox="0 0 200 210" className={className}>
+      <path d="M36 20 l-8 -10 M48 14 l-2 -12" stroke={dark} strokeWidth="5" strokeLinecap="round" />
+      <path d="M164 20 l8 -10 M152 14 l2 -12" stroke={dark} strokeWidth="5" strokeLinecap="round" />
+      <path d="M56 52 L40 16 L80 38 Z" fill={dark} /><path d="M144 52 L160 16 L120 38 Z" fill={dark} />
+      {wings}
+      <ellipse cx="100" cy="116" rx="66" ry="70" fill={body} />
+      <circle cx="100" cy="86" r="52" fill={body} />
+      <ellipse cx="100" cy="142" rx="42" ry="38" fill={belly} />
+      <path d="M82 136 q9 9 18 0 M100 136 q9 9 18 0 M91 156 q9 9 18 0" stroke="#DCC294" strokeWidth="4" strokeLinecap="round" fill="none" />
+      {eyes}
+      {happy && (<g fill="#F49B9B" opacity=".65"><ellipse cx="48" cy="128" rx="10" ry="6" /><ellipse cx="152" cy="128" rx="10" ry="6" /></g>)}
+      <path d="M90 116 L110 116 L100 134 Z" fill={beak} stroke={beak} strokeWidth="6" strokeLinejoin="round" />
+      <ellipse cx="80" cy="190" rx="13" ry="7" fill={beak} /><ellipse cx="120" cy="190" rx="13" ry="7" fill={beak} />
+      <path d="M74 188 v5 M86 188 v5 M114 188 v5 M126 188 v5" stroke="#D97F2A" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+function HootBubble({ children, className = '', tail = 'left' }: { children?: any; className?: string; tail?: 'left' | 'center' }) {
+  return (
+    <div className={`relative bg-white rounded-2xl shadow-card border-2 border-[#F6E7C8] px-4 py-2.5 font-display text-ink ${className}`}>
+      {children}
+      <span className={`absolute w-4 h-4 bg-white border-[#F6E7C8] rotate-45 rounded-[3px] -bottom-[9px] border-r-2 border-b-2 ${tail === 'center' ? 'left-1/2 -ml-2' : 'left-4'}`} />
+    </div>
+  );
+}
+function HootBar({ message, expression = 'normal' }: { message: string | null; expression?: HootExpr }) {
+  return (
+    <div className="flex items-end gap-2 min-h-[62px]">
+      <div className="w-14 shrink-0 anim-bob"><HootArt expression={expression} className="w-full" /></div>
+      {message
+        ? <HootBubble key={message} className="flex-1 mb-2 text-lg font-bold leading-snug anim-pop">{message}</HootBubble>
+        : <div className="flex-1" />}
+    </div>
+  );
+}
+
+// ------------------- components/ui.tsx -------------------
+type BtnColor = 'orange' | 'green' | 'teal' | 'white' | 'ghost';
+const BTN_STYLES: Record<BtnColor, { base: string; shadow: string }> = {
+  orange: { base: 'bg-[#F0691C] text-white', shadow: 'shadow-[0_5px_0_#C2540F]' },
+  green:  { base: 'bg-[#3FA056] text-white', shadow: 'shadow-[0_5px_0_#2F7F42]' },
+  teal:   { base: 'bg-teal text-white',      shadow: 'shadow-[0_5px_0_#2E8A99]' },
+  white:  { base: 'bg-white text-ink border-2 border-[#EDDCBB]', shadow: 'shadow-[0_5px_0_#EDDCBB]' },
+  ghost:  { base: 'bg-transparent text-softink', shadow: '' },
+};
+function BigButton({ color = 'orange', onClick, children, className = '', size = 'md' }: {
+  color?: BtnColor; onClick?: () => void; children?: any; className?: string; size?: 'md' | 'lg' | 'xl';
+}) {
+  const s = BTN_STYLES[color];
+  return (
+    <button onClick={onClick}
+      className={`inline-flex items-center justify-center gap-2 rounded-full font-display font-extrabold select-none
+        transition-all duration-100 active:translate-y-[4px] active:shadow-none
+        ${size === 'xl' ? 'px-10 py-4 text-3xl' : size === 'lg' ? 'px-8 py-3.5 text-2xl' : 'px-6 py-2.5 text-xl'}
+        ${s.base} ${s.shadow} ${className}`}>
+      {children}
+    </button>
+  );
+}
+function BackButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button onClick={onClick} aria-label="Back"
+      className="w-11 h-11 rounded-full bg-white shadow-card grid place-items-center text-ink active:scale-95 transition-transform shrink-0">
+      <IconArrowLeft className="w-6 h-6" />
+    </button>
+  );
+}
+function SoundToggle({ on, onToggle }: { on: boolean; onToggle: () => void }) {
+  return (
+    <button onClick={onToggle} aria-label="Toggle sound"
+      className="w-12 h-12 rounded-full bg-white shadow-card grid place-items-center text-softink active:scale-95 transition-transform">
+      {on ? <IconSpeaker className="w-6 h-6" /> : <IconSpeakerOff className="w-6 h-6" />}
+    </button>
+  );
+}
+function ProgressBar({ value, total, className = '' }: { value: number; total: number; className?: string }) {
+  const pct = Math.max(0, Math.min(100, Math.round((value / total) * 100)));
+  return (
+    <div className={`h-3.5 rounded-full bg-[#F0E2C6] overflow-hidden ${className}`}>
+      <div className="h-full rounded-full bg-green transition-all duration-500" style={{ width: `${pct}%` }} />
+    </div>
+  );
+}
+function ProgressDots({ total, current, isLearned }: { total: number; current: number; isLearned: (i: number) => boolean }) {
+  return (
+    <div className="flex items-center gap-[5px]">
+      {Array.from({ length: total }).map((_, i) => {
+        const state = i === current ? 'now' : isLearned(i) ? 'done' : 'todo';
+        return (
+          <span key={i} className={`block rounded-full transition-all duration-300 ${state === 'now' ? 'w-4 h-4 bg-[#F0691C] anim-pulse-soft' : state === 'done' ? 'w-2.5 h-2.5 bg-green' : 'w-2.5 h-2.5 bg-[#EDDCBB]'}`} />
+        );
+      })}
+    </div>
+  );
+}
+function Toast({ toast }: { toast: { en: string; ar: string } | null }) {
+  if (!toast) return null;
+  return (
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[60] anim-toast w-[92%] max-w-sm">
+      <div className="bg-ink text-white rounded-2xl px-5 py-3 shadow-card flex items-center justify-between gap-3">
+        <span className="font-bold text-base leading-tight">{toast.en}</span>
+        <span dir="rtl" className="font-ar text-base leading-tight opacity-90">{toast.ar}</span>
+      </div>
+    </div>
+  );
+}
+function ConfirmDialog({ open, title, titleAr, message, messageAr, primaryLabel, primaryLabelAr, secondaryLabel, secondaryLabelAr, onPrimary, onSecondary }: {
+  open: boolean; title: string; titleAr?: string; message?: string; messageAr?: string;
+  primaryLabel: string; primaryLabelAr?: string; secondaryLabel: string; secondaryLabelAr?: string;
+  onPrimary: () => void; onSecondary: () => void;
+}) {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-50 grid place-items-center px-6 bg-ink/50">
+      <div className="bg-white rounded-[1.75rem] shadow-card p-6 w-full max-w-sm text-center anim-pop">
+        <h3 className="text-2xl font-extrabold text-ink leading-tight">{title}</h3>
+        {titleAr && <p dir="rtl" className="font-ar text-lg font-bold text-softink mt-1">{titleAr}</p>}
+        {message && <p className="text-base font-bold text-softink mt-2 leading-snug">{message}</p>}
+        {messageAr && <p dir="rtl" className="font-ar text-sm font-bold text-softink mt-1 leading-snug">{messageAr}</p>}
+        <div className="mt-5 flex flex-col gap-2.5">
+          <BigButton color="green" className="w-full" onClick={onPrimary}>
+            {primaryLabel}
+            {primaryLabelAr && <><span className="opacity-50 mx-0.5">·</span><span dir="rtl" className="font-ar text-base opacity-90">{primaryLabelAr}</span></>}
+          </BigButton>
+          <BigButton color="ghost" className="w-full !py-2 text-lg" onClick={onSecondary}>
+            {secondaryLabel}
+            {secondaryLabelAr && <><span className="opacity-50 mx-0.5">·</span><span dir="rtl" className="font-ar text-base opacity-90">{secondaryLabelAr}</span></>}
+          </BigButton>
+        </div>
+      </div>
+    </div>
+  );
+}
+function StepTrail({ active }: { active: number }) {
+  const steps = [
+    { icon: <IconEye className="w-[18px] h-[18px]" />, label: 'See' },
+    { icon: <IconSpeaker className="w-[18px] h-[18px]" />, label: 'Hear' },
+    { icon: <IconMic className="w-[18px] h-[18px]" />, label: 'Say' },
+    { icon: <IconStar className="w-4 h-4" />, label: 'Play' },
+  ];
+  return (
+    <div className="flex items-center justify-center" aria-label={`Learning step ${Math.min(active + 1, 4)} of 4`}>
+      {steps.map((s, i) => {
+        const state = i < active ? 'done' : i === active ? 'now' : 'todo';
+        return (
+          <React.Fragment key={s.label}>
+            {i > 0 && <span className={`w-4 h-[5px] rounded-full mx-1 ${i <= active ? 'bg-[#9CD3AC]' : 'bg-[#EDDCBB]'}`} />}
+            <span className={`w-9 h-9 rounded-full grid place-items-center transition-all duration-300 ${state === 'done' ? 'bg-green-soft text-green-dark' : state === 'now' ? 'bg-[#F0691C] text-white anim-pulse-soft' : 'bg-[#F4EAD5] text-[#C9B696]'}`}>
+              {state === 'done' ? <IconCheck className="w-[18px] h-[18px]" /> : s.icon}
+            </span>
+          </React.Fragment>
+        );
+      })}
+    </div>
+  );
+}
+function ListenHero({ playing, listened, onListen }: { playing: boolean; listened: boolean; onListen: () => void }) {
+  const label = playing
+    ? { en: 'Playing…', ar: 'جارٍ التشغيل…' }
+    : listened ? { en: 'Play again', ar: 'شغّل مرة أخرى' } : { en: 'Tap to listen', ar: 'اضغط لتستمع' };
+  return (
+    <div className="flex flex-col items-center gap-2.5">
+      <button onClick={onListen} aria-label="Listen to the word and sentence"
+        className={`relative w-28 h-28 rounded-full bg-[#F0691C] text-white shadow-[0_6px_0_#C2540F] active:translate-y-1.5 active:shadow-[0_2px_0_#C2540F] transition-all grid place-items-center ${!playing && !listened ? 'anim-pulse-soft' : ''}`}>
+        {playing && (<>
+          <span className="wave-ring-o" />
+          <span className="wave-ring-o" style={{ animationDelay: '.5s' }} />
+          <span className="wave-ring-o" style={{ animationDelay: '1s' }} />
+        </>)}
+        <IconSpeaker className={`w-12 h-12 ${playing ? 'anim-pulse-soft' : ''}`} />
+      </button>
+      <div className="text-center leading-tight">
+        <div className={`text-base font-extrabold ${playing ? 'text-orange-dark' : 'text-softink'}`}>{label.en}</div>
+        <div dir="rtl" className="font-ar text-sm font-bold text-softink">{label.ar}</div>
+      </div>
+    </div>
+  );
+}
+function FlyingStar({ flight, onDone }: { flight: Flight; onDone: () => void }) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const doneRef = useRef(false);
+  useEffect(() => {
+    const finish = () => {
+      if (doneRef.current) return;
+      doneRef.current = true;
+      onDone();
+    };
+    const el = ref.current;
+    let fallback = 0;
+    if (el && typeof (el as any).animate === 'function') {
+      const dx = flight.to.x - flight.from.x;
+      const dy = flight.to.y - flight.from.y;
+      const anim = (el as any).animate([
+        { transform: 'translate(0,0) scale(1)', opacity: 1 },
+        { transform: `translate(${dx * 0.45}px, ${dy * 0.45 - 80}px) scale(1.15)`, opacity: 1, offset: 0.5 },
+        { transform: `translate(${dx}px, ${dy}px) scale(0.4)`, opacity: 0.9 },
+      ], { duration: 800, easing: 'cubic-bezier(.5,.05,.6,1)' });
+      anim.onfinish = finish;
+      fallback = window.setTimeout(finish, 1500);
+    } else {
+      fallback = window.setTimeout(finish, 700);
+    }
+    return () => { window.clearTimeout(fallback); finish(); };
+  }, []);
+  return (
+    <div ref={ref} aria-hidden="true" className="fixed z-[70] pointer-events-none"
+      style={{ left: flight.from.x - 26, top: flight.from.y - 26 }}>
+      <IconStar className="w-[52px] h-[52px] text-yellow drop-shadow-lg" />
+    </div>
+  );
+}
+function PicOptions({ options, correctId, wrong, onPick }: { options: Word[]; correctId: string | null; wrong: string[]; onPick: (w: Word, e?: any) => void }) {
+  const settled = correctId != null;
+  return (
+    <div className="grid grid-cols-3 gap-2.5 mt-4">
+      {options.map((o, i) => {
+        const isCorrect = correctId === o.id, isWrong = wrong.includes(o.id);
+        return (
+          <button key={o.id} onClick={(e) => onPick(o, e)} disabled={isWrong} aria-label={o.english}
+            className={`relative aspect-square rounded-3xl bg-white shadow-card p-1.5 border-4 transition-all duration-200 anim-pop ${isCorrect ? 'border-green bg-green-soft scale-105' : isWrong ? 'border-transparent opacity-40 anim-shake' : settled ? 'border-transparent opacity-60' : 'border-transparent active:scale-95'}`}
+            style={{ animationDelay: `${i * 70}ms` }}>
+            <AnimalArt id={o.id} className="w-full h-full" />
+            {isCorrect && (<>
+              <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-green text-white grid place-items-center shadow-card anim-pop"><IconCheck className="w-5 h-5" /></span>
+              <span className="absolute -top-3 left-1 w-5 h-5 text-yellow anim-twinkle"><IconSparkle className="w-full h-full" /></span>
+              <span className="absolute -bottom-2 right-3 w-4 h-4 text-orange anim-twinkle" style={{ animationDelay: '.2s' }}><IconSparkle className="w-full h-full" /></span>
+            </>)}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+function WordOptions({ options, correctId, wrong, onPick }: { options: Word[]; correctId: string | null; wrong: string[]; onPick: (w: Word, e?: any) => void }) {
+  const settled = correctId != null;
+  return (
+    <div className="mt-4 space-y-2.5">
+      {options.map((o, i) => {
+        const isCorrect = correctId === o.id, isWrong = wrong.includes(o.id);
+        return (
+          <button key={o.id} onClick={(e) => onPick(o, e)} disabled={isWrong} aria-label={o.english}
+            className={`w-full rounded-2xl bg-white shadow-card px-5 py-3.5 border-4 transition-all duration-200 text-2xl font-extrabold tracking-wide anim-pop flex items-center justify-center gap-2 ${isCorrect ? 'border-green bg-green-soft text-green-dark' : isWrong ? 'border-transparent opacity-40 anim-shake text-ink' : settled ? 'border-transparent opacity-60 text-ink' : 'border-transparent text-ink active:scale-[.98]'}`}
+            style={{ animationDelay: `${i * 70}ms` }}>
+            {isCorrect && <IconCheck className="w-6 h-6 shrink-0" />}
+            <span>{o.english}</span>
+            {isCorrect && <span className="w-4 h-4 text-yellow anim-twinkle shrink-0"><IconSparkle className="w-full h-full" /></span>}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+function Confetti() {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current; if (!canvas) return;
+    const ctx = canvas.getContext('2d'); if (!ctx) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const rect = () => canvas.getBoundingClientRect();
+    const resize = () => {
+      canvas.width = rect().width * dpr; canvas.height = rect().height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize(); window.addEventListener('resize', resize);
+    const colors = ['#FF8A3D', '#FFC93C', '#5BBA6F', '#3FA8B8', '#F4A9B8', '#FF6B6B'];
+    const parts = Array.from({ length: 90 }).map(() => ({
+      x: rect().width * Math.random(), y: -20 - rect().height * Math.random() * 0.6,
+      w: 6 + Math.random() * 6, h: 8 + Math.random() * 8,
+      vy: 1.6 + Math.random() * 2.4, vx: -1 + Math.random() * 2,
+      rot: Math.random() * Math.PI, vr: -0.1 + Math.random() * 0.2,
+      color: colors[Math.floor(Math.random() * colors.length)],
+    }));
+    let raf = 0; const start = performance.now();
+    const tick = (t: number) => {
+      const el = t - start;
+      const W = rect().width, H = rect().height;
+      ctx.clearRect(0, 0, W, H);
+      const fade = el > 3200 ? Math.max(0, 1 - (el - 3200) / 800) : 1;
+      parts.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.rot += p.vr;
+        if (p.y > H + 30) { p.y = -20; p.x = W * Math.random(); }
+        ctx.save(); ctx.globalAlpha = fade; ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color; ctx.beginPath();
+        if ((ctx as any).roundRect) (ctx as any).roundRect(-p.w / 2, -p.h / 2, p.w, p.h, 2);
+        else ctx.rect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.fill(); ctx.restore();
+      });
+      if (el < 4000) raf = requestAnimationFrame(tick); else ctx.clearRect(0, 0, W, H);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', resize); };
+  }, []);
+  return <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 w-full h-full z-10" />;
+}
+
+// ------------------- screens/HomeScreen.tsx -------------------
+function HomeScreen({ progress, onPrimary, onOpenCard, onParent, onToggleSound, speakText }: {
+  progress: AppProgress; onPrimary: () => void; onOpenCard: () => void; onParent: () => void;
+  onToggleSound: () => void; speakText: (t: string, o?: { rate?: number }) => boolean;
+}) {
+  const a = progress.categories.animals;
+  const learned = a.wordsLearned.length;
+  const totalStars = a.lessonStars + a.quizStars;
+  const [hootIdx, setHootIdx] = useState(0);
+  const [wink, setWink] = useState(false);
+  const hootMsgs = ["Hi! I'm Hoot! 👋", 'Let\'s learn!', 'Hoo hoo!'];
+  const hootExprs: HootExpr[] = ['wave', 'happy', 'wink'];
+  const tapHoot = () => {
+    const next = (hootIdx + 1) % hootMsgs.length;
+    setHootIdx(next);
+    setWink(true);
+    window.setTimeout(() => setWink(false), 900);
+    Sfx.tap();
+    if (next === 1) speakText("Hi! I'm Hoot! Let's learn!", { rate: 0.95 });
+  };
+  const cta = learned < 10
+    ? (learned > 0 ? { en: 'Keep Going!', ar: 'أكمل التعلم!' } : { en: "Let's Learn!", ar: 'هيا نتعلم!' })
+    : !a.quizCompleted ? { en: 'Quiz Time!', ar: 'حل الاختبار!' } : { en: 'Play Again!', ar: 'العب مجددًا!' };
+  return (
+    <div className="mx-auto w-full max-w-md px-5 pt-5 pb-[calc(2rem+env(safe-area-inset-bottom))] min-h-screen flex flex-col">
+      <div className="flex justify-end"><SoundToggle on={progress.soundOn} onToggle={onToggleSound} /></div>
+      <div className="text-center mt-2">
+        <h1 className="text-[2.1rem] leading-[1.12] font-extrabold text-ink">My First 100<br />English Words</h1>
+        <p className="text-xl font-extrabold text-teal-dark mt-2">Let&rsquo;s Learn Animals!</p>
+        <p dir="rtl" className="font-ar text-2xl font-bold text-ink mt-0.5">هيا نتعلم الحيوانات!</p>
+      </div>
+      <div className="flex flex-col items-center mt-5">
+        <HootBubble tail="center" className="text-xl z-10">{hootMsgs[hootIdx]}</HootBubble>
+        <button onClick={tapHoot} aria-label="Hoot the owl" className="w-40 mt-1 anim-bob active:scale-95 transition-transform">
+          <HootArt expression={wink ? 'wink' : hootExprs[hootIdx]} className="w-full" />
+        </button>
+      </div>
+      <button onClick={onOpenCard} className="mt-5 bg-white rounded-[2rem] shadow-card p-4 w-full flex items-center gap-4 text-left active:scale-[.98] transition-transform">
+        <div className="w-16 h-16 rounded-3xl bg-orange-soft grid place-items-center shrink-0"><IconPaw className="w-10 h-10 text-orange" /></div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <span className="text-2xl font-extrabold text-ink leading-none">Animals</span>
+            <span dir="rtl" className="font-ar text-lg text-softink">الحيوانات</span>
+          </div>
+          <div className="text-sm font-bold text-softink mt-0.5">Level 1 · 10 Words</div>
+          <div className="flex items-center gap-2.5 mt-2">
+            <ProgressBar value={learned} total={10} className="flex-1" />
+            <span className="text-sm font-extrabold text-softink shrink-0">{learned}/10</span>
+          </div>
+          <div className="flex items-center gap-1.5 mt-2 flex-wrap">
+            <span className="text-xs font-extrabold text-softink">{learned}/10 completed</span>
+            {totalStars > 0 && (
+              <span className="inline-flex items-center gap-1 bg-yellow-soft rounded-full px-2 py-0.5 text-xs font-extrabold text-ink">
+                <IconStar className="w-3.5 h-3.5 text-[#E3A81E]" />{totalStars}
+              </span>
+            )}
+            {a.badge && (
+              <span className="inline-flex items-center gap-1 bg-green-soft rounded-full px-2 py-0.5 text-xs font-extrabold text-green-dark">
+                <IconTrophy className="w-3.5 h-3.5" />Explorer
+              </span>
+            )}
+          </div>
+        </div>
+        <IconChevronRight className="w-6 h-6 text-[#C9B696] shrink-0" />
+      </button>
+      <div className="mt-6 flex justify-center">
+        <BigButton size="xl" onClick={onPrimary} className="w-full max-w-xs flex-col !gap-0.5 !py-4">
+          <span>{cta.en}</span>
+          <span dir="rtl" className="font-ar text-xl opacity-90">{cta.ar}</span>
+        </BigButton>
+      </div>
+      <div className="mt-auto pt-8 flex justify-center">
+        <button onClick={onParent} className="flex items-center gap-2 text-softink font-bold active:opacity-60">
+          <IconBody className="w-5 h-5" /><span>For Parents</span>
+          <span className="opacity-40">·</span><span dir="rtl" className="font-ar">للوالدين</span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ------------------- screens/WorldMapScreen.tsx -------------------
+function MapStep({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <span className="flex flex-col items-center gap-0.5">
+      <span className="w-8 h-8 rounded-full bg-white shadow-card grid place-items-center text-ink">{icon}</span>
+      <span className="text-[10px] font-extrabold text-softink">{label}</span>
+    </span>
+  );
+}
+function WorldMapScreen({ progress, onBack, onSelectAnimals, onTryLocked, onTryFuture }: {
+  progress: AppProgress; onBack: () => void; onSelectAnimals: () => void;
+  onTryLocked: () => void; onTryFuture: () => void;
+}) {
+  const a = progress.categories.animals;
+  const learned = a.wordsLearned.length;
+  const done = a.completed;
+  const totalStars = a.lessonStars + a.quizStars;
+  const [shakeId, setShakeId] = useState<string | null>(null);
+  const status = done
+    ? { pill: 'Completed', pillAr: 'مكتمل', cta: 'Play again!' }
+    : learned >= 10 ? { pill: 'Quiz time', pillAr: 'الاختبار', cta: 'Take the Quiz!' }
+    : learned > 0 ? { pill: 'In progress', pillAr: 'قيد التقدم', cta: 'Keep going!' }
+    : { pill: 'New', pillAr: 'جديد', cta: "Let's start!" };
+  return (
+    <div className="mx-auto w-full max-w-md px-5 py-4 pb-[calc(2rem+env(safe-area-inset-bottom))] min-h-screen flex flex-col">
+      <div className="flex items-center gap-3">
+        <BackButton onClick={onBack} />
+        <div className="flex-1 min-w-0">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-ink leading-none">Learning Worlds</h1>
+          <p dir="rtl" className="font-ar text-lg font-bold text-softink mt-0.5">عوالم التعلم</p>
+        </div>
+        <div className="h-11 px-3 rounded-full bg-yellow-soft flex items-center gap-1.5 shrink-0">
+          <IconStar className="w-5 h-5 text-[#E3A81E]" />
+          <span className="font-extrabold text-ink text-lg leading-none">{totalStars}</span>
+        </div>
+      </div>
+      <div className={`mt-5 rounded-3xl p-4 flex items-center gap-3 shadow-card ${done ? 'bg-green-soft' : 'bg-yellow-soft'}`}>
+        <div className={`w-11 h-11 rounded-2xl grid place-items-center shrink-0 text-white ${done ? 'bg-green' : 'bg-[#E3A81E]'}`}>
+          {done ? <IconUnlock className="w-6 h-6" /> : <IconLock className="w-5 h-5" />}
+        </div>
+        <div className="flex-1">
+          <div className="font-extrabold text-ink leading-tight">{done ? 'New world unlocked: Food!' : 'Complete Animals to unlock the next world!'}</div>
+          <div dir="rtl" className="font-ar text-softink font-bold text-sm leading-snug mt-0.5">{done ? 'تم فتح عالم الطعام!' : 'أكمل عالم الحيوانات لفتح العالم التالي!'}</div>
+        </div>
+      </div>
+      {!done && (
+        <div className="mt-3 flex items-start justify-center gap-2.5" aria-hidden="true">
+          <MapStep icon={<IconPaw className="w-4 h-4 text-orange" />} label="Learn" />
+          <IconArrowRight className="w-4 h-4 text-[#C9B696] mt-2" />
+          <MapStep icon={<IconCheck className="w-4 h-4 text-green-dark" />} label="Complete" />
+          <IconArrowRight className="w-4 h-4 text-[#C9B696] mt-2" />
+          <MapStep icon={<IconUnlock className="w-4 h-4 text-teal-dark" />} label="Unlock" />
+        </div>
+      )}
+      <button onClick={onSelectAnimals} className="mt-4 w-full text-left bg-white rounded-[2rem] shadow-card p-5 border-4 border-orange-soft active:scale-[.98] transition-transform">
+        <div className="flex items-center gap-4">
+          <div className="relative shrink-0">
+            <div className="w-16 h-16 rounded-3xl bg-orange-soft grid place-items-center"><IconPaw className="w-10 h-10 text-orange" /></div>
+            <span className="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-ink text-white text-sm font-extrabold grid place-items-center shadow-card">1</span>
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-baseline gap-2 flex-wrap">
+              <span className="text-2xl font-extrabold text-ink leading-none">Animals</span>
+              <span dir="rtl" className="font-ar text-lg text-softink font-bold">الحيوانات</span>
+            </div>
+            <div className="text-sm font-bold text-softink mt-0.5">Level 1 · 10 Words</div>
+          </div>
+          {done
+            ? <span className="w-11 h-11 rounded-full bg-green text-white grid place-items-center shrink-0"><IconCheck className="w-6 h-6" /></span>
+            : <span className="w-11 h-11 rounded-full bg-[#F0691C] text-white grid place-items-center shrink-0"><IconPlay className="w-5 h-5 ml-0.5" /></span>}
+        </div>
+        <div className="mt-4 flex items-center gap-3">
+          <ProgressBar value={learned} total={10} className="flex-1" />
+          <span className={`shrink-0 ${learned >= 10 ? 'text-[#E3A81E]' : 'text-[#E3D9C2]'}`}><IconStar className="w-5 h-5" /></span>
+          <span className="text-sm font-extrabold text-softink shrink-0">{learned}/10</span>
+        </div>
+        <div className="mt-3 flex items-center justify-between gap-2">
+          <span className={`text-sm font-extrabold rounded-full px-3 py-1 ${done ? 'bg-green-soft text-green-dark' : 'bg-orange-soft text-orange-dark'}`}>
+            {status.pill} · <span dir="rtl" className="font-ar">{status.pillAr}</span>
+          </span>
+          <span className="text-sm font-extrabold text-teal-dark text-right">{status.cta}</span>
+        </div>
+      </button>
+      <div className="mt-6 flex items-baseline justify-between px-1">
+        <h2 className="text-xl font-extrabold text-ink">More Worlds</h2>
+        <span dir="rtl" className="font-ar text-base font-bold text-softink">عوالم قادمة</span>
+      </div>
+      <div className="grid grid-cols-2 gap-3 mt-3">
+        {CATEGORY_META.filter(m => m.id !== 'animals').map(m => {
+          const foodUnlocked = m.id === 'food' && done;
+          const st = CATEGORY_STYLE[m.id];
+          return (
+            <button key={m.id} aria-label={`${m.nameEnglish}, Level ${m.level}${foodUnlocked ? ', unlocked' : ', locked'}`}
+              onClick={() => {
+                Sfx.tap();
+                if (foodUnlocked) { onTryFuture(); return; }
+                setShakeId(m.id);
+                window.setTimeout(() => setShakeId(null), 500);
+                onTryLocked();
+              }}
+              className={`relative bg-white rounded-3xl p-3.5 pt-4 shadow-card flex flex-col items-center gap-1.5 transition-transform active:scale-95 ${shakeId === m.id ? 'anim-shake' : ''} ${foodUnlocked ? 'ring-4 ring-green/40' : ''}`}>
+              {foodUnlocked && <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-green text-white text-xs font-extrabold px-2.5 py-0.5 rounded-full shadow-card whitespace-nowrap">Next World!</span>}
+              <div className={`w-14 h-14 rounded-2xl grid place-items-center ${st.chip} ${foodUnlocked ? '' : 'opacity-60'}`}>
+                <span className={st.icon}>{CATEGORY_ICONS[m.iconKey]}</span>
+              </div>
+              <div className="text-base font-extrabold text-ink leading-none mt-0.5">{m.nameEnglish}</div>
+              <div dir="rtl" className="font-ar text-sm text-softink font-bold leading-none">{m.nameArabic}</div>
+              <div className="text-xs font-bold text-[#B9A78F] mt-0.5">Level {m.level}</div>
+              <div className={`absolute top-2.5 right-2.5 w-7 h-7 rounded-full grid place-items-center ${foodUnlocked ? 'bg-green text-white' : 'bg-[#F0E2C6] text-[#A89274]'}`}>
+                {foodUnlocked ? <IconUnlock className="w-4 h-4" /> : <IconLock className="w-4 h-4" />}
+              </div>
+            </button>
+          );
+        })}
+      </div>
+      <div className="mt-6 flex justify-center pb-2 text-center">
+        <span className="text-sm font-bold text-[#B9A78F]">More adventures coming soon · <span dir="rtl" className="font-ar">مغامرات جديدة قريبًا</span></span>
+      </div>
+    </div>
+  );
+}
+
+// ------------------- screens/LessonScreen.tsx -------------------
+function WordCard({ word, compact, learned }: { word: Word; compact?: boolean; learned?: boolean }) {
+  return (
+    <div className="relative bg-white rounded-[2rem] shadow-card p-5">
+      {learned && (
+        <span aria-label="Learned" title="Learned" className="absolute top-3 right-3 w-8 h-8 rounded-full bg-green-soft text-green-dark grid place-items-center">
+          <IconCheck className="w-5 h-5" />
+        </span>
+      )}
+      <AnimalArt id={word.id} className={compact ? 'w-28 h-28 mx-auto' : 'w-52 h-52 mx-auto'} />
+      <div className="text-center mt-2">
+        <div dir="ltr" className={`${compact ? 'text-4xl' : 'text-5xl'} font-extrabold text-ink tracking-wide leading-tight`}>{word.english}</div>
+        <div dir="rtl" className={`font-ar font-bold text-teal-dark ${compact ? 'text-2xl' : 'text-3xl'} mt-0.5`}>{word.arabic}</div>
+      </div>
+      {!compact && (
+        <div className="mt-4 rounded-2xl bg-cream border-2 border-[#F6EAD2] px-4 py-3 text-center">
+          <div dir="ltr" className="text-xl font-bold text-ink">{word.sentence}</div>
+          <div dir="rtl" className="font-ar text-lg text-softink mt-0.5">{word.sentenceArabic}</div>
+        </div>
+      )}
+    </div>
+  );
+}
+function RepeatPanel({ word, onHearAgain, onDone }: { word: Word; onHearAgain: () => void; onDone: () => void }) {
+  const [said, setSaid] = useState(false);
+  const handleSaid = () => {
+    if (said) return;
+    setSaid(true);
+    Sfx.star();
+    window.setTimeout(onDone, 750);
+  };
+  return (
+    <div className="bg-white rounded-[2rem] shadow-card p-5 text-center anim-slide">
+      <div className="text-2xl font-extrabold text-teal-dark leading-none">Your turn!</div>
+      <div dir="rtl" className="font-ar text-lg text-softink font-bold mt-1">دورك الآن!</div>
+      <div className="mt-3 text-lg font-bold text-softink">Say:</div>
+      <div dir="ltr" className="text-5xl font-extrabold text-ink tracking-wide leading-tight">{word.english}</div>
+      <div dir="rtl" className="font-ar text-xl text-teal-dark font-bold">{word.arabic}</div>
+      <div className="mt-5 flex justify-center">
+        <button onClick={handleSaid} aria-label="I said it"
+          className={`relative w-28 h-28 rounded-full bg-[#F0691C] shadow-[0_6px_0_#C2540F] active:translate-y-1.5 active:shadow-[0_2px_0_#C2540F] transition-all grid place-items-center text-white ${said ? '' : 'anim-pulse-soft'}`}>
+          <span className="flex flex-col items-center gap-1">
+            <IconMic className="w-9 h-9" />
+            <span className="text-sm font-extrabold leading-none">I said it!</span>
+          </span>
+          {said && (
+            <>
+              <span className="absolute -top-3 -right-2 w-7 h-7 text-yellow anim-twinkle"><IconSparkle className="w-full h-full" /></span>
+              <span className="absolute -bottom-2 -left-3 w-6 h-6 text-orange anim-twinkle" style={{ animationDelay: '.15s' }}><IconSparkle className="w-full h-full" /></span>
+              <span className="absolute top-1/2 -right-6 w-5 h-5 text-teal anim-twinkle" style={{ animationDelay: '.3s' }}><IconSparkle className="w-full h-full" /></span>
+            </>
+          )}
+        </button>
+      </div>
+      <div dir="rtl" className="font-ar text-softink font-bold mt-1.5">قلتها!</div>
+      <button onClick={onHearAgain}
+        className="mt-3 inline-flex items-center gap-1.5 text-teal-dark font-bold active:opacity-60">
+        <IconSpeaker className="w-5 h-5" /> Hear again <span dir="rtl" className="font-ar">اسمع مرة أخرى</span>
+      </button>
+    </div>
+  );
+}
+function WinPanel({ isLast, quizDone, onNext, onQuiz, onMap }: {
+  isLast: boolean; quizDone: boolean; onNext: () => void; onQuiz: () => void; onMap: () => void;
+}) {
+  return (
+    <div className="bg-white rounded-[2rem] shadow-card p-6 text-center anim-pop relative">
+      <div className="relative mx-auto w-28 h-28 anim-star">
+        <IconStar className="w-full h-full text-yellow drop-shadow-md" />
+        <span className="absolute -top-1 -right-2 w-6 h-6 text-orange anim-twinkle"><IconSparkle className="w-full h-full" /></span>
+        <span className="absolute -bottom-1 -left-2 w-5 h-5 text-teal anim-twinkle" style={{ animationDelay: '.2s' }}><IconSparkle className="w-full h-full" /></span>
+      </div>
+      <div className="text-3xl font-extrabold text-green-dark mt-2">+1 Star!</div>
+      <div dir="rtl" className="font-ar text-lg text-softink font-bold">نجمة جديدة!</div>
+      {isLast && !quizDone && (
+        <BigButton size="lg" className="w-full mt-5 flex-col !gap-0.5 anim-pulse-soft" onClick={onQuiz}>
+          <span>Start the Quiz!</span>
+          <span dir="rtl" className="font-ar text-lg opacity-90">ابدأ الاختبار!</span>
+        </BigButton>
+      )}
+      {isLast && quizDone && (
+        <div className="mt-5 space-y-2.5">
+          <BigButton size="lg" className="w-full flex-col !gap-0.5" onClick={onQuiz}>
+            <span>Take the Quiz Again!</span>
+            <span dir="rtl" className="font-ar text-lg opacity-90">أعد الاختبار!</span>
+          </BigButton>
+          <BigButton color="white" className="w-full" onClick={onMap}>Back to Map</BigButton>
+        </div>
+      )}
+      {!isLast && (
+        <BigButton color="green" size="lg" className="w-full mt-5 flex-col !gap-0.5 anim-pulse-soft" onClick={onNext}>
+          <span>Next Animal</span>
+          <span dir="rtl" className="font-ar text-lg opacity-90">الحيوان التالي</span>
+        </BigButton>
+      )}
+    </div>
+  );
+}
+function LessonScreen({ words, learnedIds, quizDone, soundOn, sayWord, sayWordAndSentence, onBack, onWordComplete, onFinish }: {
+  words: Word[]; learnedIds: string[]; quizDone: boolean; soundOn: boolean;
+  sayWord: (w: Word) => boolean; sayWordAndSentence: (w: Word) => boolean;
+  onBack: () => void; onWordComplete: (id: string) => void; onFinish: (target: 'quiz' | 'map') => void;
+}) {
+  const firstUnlearned = words.findIndex(w => !learnedIds.includes(w.id));
+  const review = firstUnlearned === -1;
+  const [index, setIndex] = useState(() => (review ? 0 : Math.max(0, firstUnlearned)));
+  const [phase, setPhase] = useState<'learn' | 'repeat' | 'play' | 'win'>('learn');
+  const [listened, setListened] = useState(false);
+  const [options, setOptions] = useState<Word[]>([]);
+  const [wrongPicks, setWrongPicks] = useState<string[]>([]);
+  const [correctFlash, setCorrectFlash] = useState<string | null>(null);
+  const [askExit, setAskExit] = useState(false);
+  const [flight, setFlight] = useState<Flight | null>(null);
+  const starRef = useRef<HTMLDivElement | null>(null);
+  const playing = useSpeechPlaying();
+  const reduceMotion = useRef(prefersReducedMotion()).current;
+  const word = words[index];
+  const isLast = index === words.length - 1;
+  const rawPlayType = index % 3;
+  const playType = rawPlayType === 2 && !(Speech.supported && soundOn) ? 0 : rawPlayType;
+  const stepActive = phase === 'learn' ? 1 : phase === 'repeat' ? 2 : phase === 'play' ? 3 : 4;
+
+  useEffect(() => {
+    setPhase('learn'); setListened(false); setWrongPicks([]); setCorrectFlash(null); setFlight(null);
+    setOptions(shuffle([words[index], ...sample(words.filter(w => w.id !== words[index].id), 2)]));
+  }, [index]);
+
+  useEffect(() => {
+    if (phase === 'play' && playType === 2 && soundOn) {
+      const t = window.setTimeout(() => { Speech.sayWord(word); }, 400);
+      return () => window.clearTimeout(t);
+    }
+  }, [phase, index]);
+
+  const handleListen = () => {
+    setListened(true);
+    sayWordAndSentence(word);
+  };
+  const handlePick = (opt: Word, e?: any) => {
+    if (correctFlash) return;
+    const fromEl = e ? e.currentTarget as HTMLElement : null;
+    if (opt.id === word.id) {
+      setCorrectFlash(opt.id);
+      Sfx.correct();
+      window.setTimeout(() => {
+        const toEl = starRef.current;
+        if (!reduceMotion && fromEl && toEl) {
+          const f = fromEl.getBoundingClientRect();
+          const t = toEl.getBoundingClientRect();
+          if (f.width && t.width) {
+            setFlight({ from: { x: f.left + f.width / 2, y: f.top + f.height / 2 }, to: { x: t.left + t.width / 2, y: t.top + t.height / 2 } });
+            return;
+          }
+        }
+        onWordComplete(word.id);
+        setPhase('win');
+      }, 600);
+    } else {
+      setWrongPicks(w => (w.includes(opt.id) ? w : [...w, opt.id]));
+      Sfx.retry();
+    }
+  };
+  const starLanded = () => {
+    setFlight(null);
+    Sfx.star();
+    onWordComplete(word.id);
+    setPhase('win');
+  };
+  const hootMsg: string | null =
+    correctFlash || phase === 'win' ? (index % 2 === 0 ? 'Great job! ⭐' : 'Excellent! 🎉')
+    : phase === 'learn' && index === 0 ? 'Listen carefully! 👂'
+    : phase === 'repeat' && index === 0 ? 'Your turn!'
+    : phase === 'play' && wrongPicks.length ? 'Try again! 💪'
+    : null;
+  const hootExpr: HootExpr = (correctFlash || phase === 'win') ? 'happy' : (phase === 'play' && !hootMsg) ? 'think' : 'normal';
+
+  return (
+    <div className="mx-auto w-full max-w-md px-5 py-4 pb-[calc(2rem+env(safe-area-inset-bottom))] min-h-screen flex flex-col">
+      <div className="flex items-center justify-between gap-2">
+        <BackButton onClick={() => setAskExit(true)} />
+        <div className="flex-1 flex flex-col items-center">
+          <div className="flex items-center gap-1 text-[10px] font-extrabold tracking-[0.16em] text-softink">
+            <IconPaw className="w-3.5 h-3.5 text-orange" /><span>ANIMALS</span>
+          </div>
+          <div className="mt-1"><ProgressDots total={words.length} current={index} isLearned={i => learnedIds.includes(words[i].id)} /></div>
+          <span className="text-xs font-extrabold text-softink mt-1 tracking-wide">{index + 1} / {words.length}</span>
+        </div>
+        <div ref={starRef} className="h-11 px-3 rounded-full bg-yellow-soft flex items-center gap-1.5 shrink-0">
+          <span key={learnedIds.length} className="anim-star inline-flex text-[#E3A81E]"><IconStar className="w-5 h-5" /></span>
+          <span className="font-extrabold text-ink text-lg leading-none">{learnedIds.length}</span>
+        </div>
+      </div>
+      <div className="mt-3"><StepTrail active={stepActive} /></div>
+      <div className="mt-2"><HootBar message={hootMsg} expression={hootExpr} /></div>
+      <div className="flex-1 flex flex-col justify-center mt-3">
+        {phase !== 'play' ? (
+          <div key={word.id} className="anim-pop"><WordCard word={word} compact={phase !== 'learn'} learned={learnedIds.includes(word.id)} /></div>
+        ) : (
+          <div key={'play' + index} className="bg-white rounded-[2rem] shadow-card p-5 anim-pop">
+            {playType === 0 && (
+              <>
+                <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Where is the <span className="text-orange-dark">{word.english}</span>?</h2>
+                <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">اختار الصورة الصحيحة!</p>
+                <PicOptions options={options} correctId={correctFlash} wrong={wrongPicks} onPick={handlePick} />
+              </>
+            )}
+            {playType === 1 && (
+              <>
+                <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Which word is this?</h2>
+                <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">اختار الكلمة الصحيحة!</p>
+                <AnimalArt id={word.id} className="w-36 h-36 mx-auto mt-3" />
+                <WordOptions options={options} correctId={correctFlash} wrong={wrongPicks} onPick={handlePick} />
+              </>
+            )}
+            {playType === 2 && (
+              <>
+                <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Listen and choose!</h2>
+                <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">استمع واختار!</p>
+                <button onClick={() => sayWord(word)} aria-label="Play the word again"
+                  className="relative mx-auto mt-3 w-24 h-24 rounded-full bg-teal text-white shadow-[0_6px_0_#2E8A99] active:translate-y-1.5 active:shadow-[0_2px_0_#2E8A99] transition-all grid place-items-center">
+                  {playing && (<>
+                    <span className="wave-ring-t" />
+                    <span className="wave-ring-t" style={{ animationDelay: '.5s' }} />
+                  </>)}
+                  <IconSpeaker className={`w-11 h-11 ${playing ? 'anim-pulse-soft' : ''}`} />
+                </button>
+                <PicOptions options={options} correctId={correctFlash} wrong={wrongPicks} onPick={handlePick} />
+              </>
+            )}
+          </div>
+        )}
+        <div className="mt-4">
+          {phase === 'learn' && (
+            <div className="flex flex-col items-center gap-4">
+              <ListenHero playing={playing} listened={listened} onListen={handleListen} />
+              {listened && (
+                <BigButton color="green" size="lg" className="w-full anim-pulse-soft" onClick={() => { Speech.cancel(); setPhase('repeat'); }}>
+                  Your turn! <IconArrowRight className="w-6 h-6" />
+                </BigButton>
+              )}
+            </div>
+          )}
+          {phase === 'repeat' && <RepeatPanel word={word} onHearAgain={() => sayWord(word)} onDone={() => { Speech.cancel(); setPhase('play'); }} />}
+          {phase === 'win' && (
+            <WinPanel isLast={isLast} quizDone={quizDone}
+              onNext={() => setIndex(index + 1)}
+              onQuiz={() => onFinish('quiz')}
+              onMap={() => onFinish('map')} />
+          )}
+        </div>
+      </div>
+      {flight && <FlyingStar flight={flight} onDone={starLanded} />}
+      <ConfirmDialog open={askExit}
+        title="Leave the lesson?" titleAr="مغادرة الدرس؟"
+        message="Your stars are saved — you can continue anytime!"
+        messageAr="نجومك محفوظة — يمكنك المتابعة في أي وقت!"
+        primaryLabel="Keep Learning" primaryLabelAr="أكمل الدرس"
+        secondaryLabel="Leave" secondaryLabelAr="خروج"
+        onPrimary={() => setAskExit(false)}
+        onSecondary={onBack} />
+    </div>
+  );
+}
+
+// ------------------- screens/QuizScreen.tsx -------------------
+function SentenceBlank({ q, solved }: { q: QuizQuestion; solved: boolean }) {
+  const target = q.word.english.toLowerCase();
+  const parts = q.word.sentence.split(new RegExp(`(${q.word.english})`, 'i'));
+  return (
+    <span dir="ltr">
+      {parts.map((p, i) =>
+        p.toLowerCase() === target
+          ? (solved
+            ? <span key={i} className="text-green-dark">{p}</span>
+            : <span key={i} className="inline-block min-w-[4.5rem] mx-1 border-b-4 border-dashed border-orange align-baseline">{'\u00A0'}</span>)
+          : <span key={i}>{p}</span>
+      )}
+    </span>
+  );
+}
+function QuizScreen({ words, soundOn, sayWord, onBack, onFinish }: {
+  words: Word[]; soundOn: boolean; sayWord: (w: Word) => boolean; onBack: () => void; onFinish: (score: number) => void;
+}) {
+  const [stage, setStage] = useState<'intro' | 'play'>('intro');
+  const [questions] = useState<QuizQuestion[]>(() => buildQuestions(words, soundOn));
+  const [qi, setQi] = useState(0);
+  const [score, setScore] = useState(0);
+  const scoreRef = useRef(0);
+  const [attempted, setAttempted] = useState(false);
+  const [wrong, setWrong] = useState<string[]>([]);
+  const [locked, setLocked] = useState(false);
+  const [askExit, setAskExit] = useState(false);
+  const [flight, setFlight] = useState<Flight | null>(null);
+  const starRowRef = useRef<HTMLDivElement | null>(null);
+  const playing = useSpeechPlaying();
+  const reduceMotion = useRef(prefersReducedMotion()).current;
+  const q = questions[qi];
+
+  useEffect(() => {
+    if (stage !== 'play' || !q || q.type !== 'listen' || !soundOn) return;
+    const t = window.setTimeout(() => { Speech.sayWord(q.word); }, 450);
+    return () => window.clearTimeout(t);
+  }, [stage, qi]);
+
+  if (stage === 'intro') {
+    return (
+      <div className="mx-auto w-full max-w-md px-5 py-4 pb-[calc(2rem+env(safe-area-inset-bottom))] min-h-screen flex flex-col">
+        <div className="flex justify-start"><BackButton onClick={onBack} /></div>
+        <div className="flex-1 flex flex-col items-center justify-center text-center anim-pop px-2">
+          <div className="w-28 anim-bob"><HootArt expression="think" className="w-full" /></div>
+          <h1 className="text-5xl font-extrabold text-ink mt-4">Quiz Time!</h1>
+          <p dir="rtl" className="font-ar text-2xl font-bold text-softink mt-1">وقت الاختبار!</p>
+          <div className="bg-white rounded-[2rem] shadow-card p-5 mt-6 w-full max-w-sm space-y-3 text-left">
+            <div className="flex items-center gap-3">
+              <span className="w-9 h-9 rounded-xl bg-orange-soft grid place-items-center shrink-0"><IconPaw className="w-5 h-5 text-orange" /></span>
+              <div className="flex-1">
+                <div className="font-extrabold text-ink leading-tight">10 fun questions</div>
+                <div dir="rtl" className="font-ar text-sm text-softink font-bold">10 أسئلة ممتعة</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="w-9 h-9 rounded-xl bg-yellow-soft grid place-items-center shrink-0"><IconStar className="w-5 h-5 text-[#C9A227]" /></span>
+              <div className="flex-1">
+                <div className="font-extrabold text-ink leading-tight">A star for every correct answer</div>
+                <div dir="rtl" className="font-ar text-sm text-softink font-bold">نجمة مع كل إجابة صحيحة</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="w-9 h-9 rounded-xl bg-green-soft grid place-items-center shrink-0"><IconTrophy className="w-5 h-5 text-green" /></span>
+              <div className="flex-1">
+                <div className="font-extrabold text-ink leading-tight">Win the Animal Explorer award</div>
+                <div dir="rtl" className="font-ar text-sm text-softink font-bold">افتح وسام مستكشف الحيوانات</div>
+              </div>
+            </div>
+          </div>
+          <BigButton size="lg" className="mt-7 flex-col !gap-0.5" onClick={() => { Sfx.tap(); setStage('play'); }}>
+            <span>Start!</span>
+            <span dir="rtl" className="font-ar text-xl opacity-90">ابدأ!</span>
+          </BigButton>
+        </div>
+      </div>
+    );
+  }
+
+  const pick = (opt: Word, e?: any) => {
+    if (locked || !q) return;
+    const fromEl = e ? e.currentTarget as HTMLElement : null;
+    if (opt.id === q.word.id) {
+      const gained = !attempted;
+      setLocked(true);
+      Sfx.correct();
+      const land = () => {
+        setFlight(null);
+        if (gained) { scoreRef.current += 1; setScore(scoreRef.current); Sfx.star(); }
+        window.setTimeout(() => {
+          if (qi + 1 < questions.length) {
+            setQi(qi + 1); setAttempted(false); setWrong([]); setLocked(false);
+          } else {
+            onFinish(scoreRef.current);
+          }
+        }, 550);
+      };
+      window.setTimeout(() => {
+        const toEl = starRowRef.current;
+        if (gained && !reduceMotion && fromEl && toEl) {
+          const f = fromEl.getBoundingClientRect();
+          const t = toEl.getBoundingClientRect();
+          if (f.width && t.width) {
+            setFlight({ from: { x: f.left + f.width / 2, y: f.top + f.height / 2 }, to: { x: t.left + t.width / 2, y: t.top + t.height / 2 } });
+            return;
+          }
+        }
+        land();
+      }, 500);
+    } else {
+      setAttempted(true);
+      setWrong(w => (w.includes(opt.id) ? w : [...w, opt.id]));
+      Sfx.retry();
+    }
+  };
+  const hootMsg = locked ? (qi % 2 === 0 ? 'Great job! ⭐' : 'Excellent! 🎉') : wrong.length ? 'Try again! 💪' : null;
+
+  return (
+    <div className="mx-auto w-full max-w-md px-5 py-4 pb-[calc(2rem+env(safe-area-inset-bottom))] min-h-screen flex flex-col">
+      <div className="flex items-center gap-3">
+        <BackButton onClick={() => setAskExit(true)} />
+        <div className="flex-1 text-center min-w-0">
+          <div className="text-[11px] font-extrabold tracking-[0.14em] text-softink">QUESTION {qi + 1} OF {questions.length}</div>
+          <div ref={starRowRef} className="flex justify-center gap-1 mt-1.5">
+            {questions.map((_, i) => {
+              const cls = i < score ? 'text-[#E3A81E]' : i === qi ? 'text-[#F0691C] anim-pulse-soft' : 'text-[#EADFC8]';
+              return <span key={i} className={`w-5 h-5 ${cls}`}><IconStar className="w-full h-full" /></span>;
+            })}
+          </div>
+        </div>
+        <div className="w-11 shrink-0" />
+      </div>
+      <div className="mt-3"><HootBar message={hootMsg} expression={locked ? 'happy' : 'think'} /></div>
+      <div className="flex-1 flex flex-col justify-center" key={qi}>
+        {q && q.type === 'picture' && (
+          <div className="bg-white rounded-[2rem] shadow-card p-5 anim-pop">
+            <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Where is the <span className="text-orange-dark">{q.word.english}</span>?</h2>
+            <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">اختار الصورة الصحيحة!</p>
+            <PicOptions options={q.options} correctId={locked ? q.word.id : null} wrong={wrong} onPick={pick} />
+          </div>
+        )}
+        {q && q.type === 'word' && (
+          <div className="bg-white rounded-[2rem] shadow-card p-5 anim-pop">
+            <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Which word is this?</h2>
+            <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">اختار الكلمة الصحيحة!</p>
+            <AnimalArt id={q.word.id} className="w-36 h-36 mx-auto mt-3" />
+            <WordOptions options={q.options} correctId={locked ? q.word.id : null} wrong={wrong} onPick={pick} />
+          </div>
+        )}
+        {q && q.type === 'listen' && (
+          <div className="bg-white rounded-[2rem] shadow-card p-5 anim-pop">
+            <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Listen and choose!</h2>
+            <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">استمع واختار!</p>
+            <button onClick={() => sayWord(q.word)} aria-label="Play the word again"
+              className="relative mx-auto mt-3 w-24 h-24 rounded-full bg-teal text-white shadow-[0_6px_0_#2E8A99] active:translate-y-1.5 active:shadow-[0_2px_0_#2E8A99] transition-all grid place-items-center">
+              {playing && (<>
+                <span className="wave-ring-t" />
+                <span className="wave-ring-t" style={{ animationDelay: '.5s' }} />
+              </>)}
+              <IconSpeaker className={`w-11 h-11 ${playing ? 'anim-pulse-soft' : ''}`} />
+            </button>
+            <PicOptions options={q.options} correctId={locked ? q.word.id : null} wrong={wrong} onPick={pick} />
+          </div>
+        )}
+        {q && q.type === 'translate' && (
+          <div className="bg-white rounded-[2rem] shadow-card p-5 anim-pop">
+            <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Which word means this?</h2>
+            <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">اختار الكلمة الصحيحة!</p>
+            <div dir="rtl" className="font-ar text-center text-5xl font-extrabold text-ink my-4">{q.word.arabic}</div>
+            <WordOptions options={q.options} correctId={locked ? q.word.id : null} wrong={wrong} onPick={pick} />
+          </div>
+        )}
+        {q && q.type === 'complete' && (
+          <div className="bg-white rounded-[2rem] shadow-card p-5 anim-pop">
+            <h2 className="text-center text-[1.6rem] font-extrabold text-ink leading-snug">Complete the sentence!</h2>
+            <p dir="rtl" className="text-center font-ar text-lg font-bold text-softink mt-0.5">أكمل الجملة!</p>
+            <AnimalArt id={q.word.id} className="w-28 h-28 mx-auto mt-2" />
+            <div className="text-2xl font-extrabold text-ink mt-3 bg-cream rounded-2xl border-2 border-[#F6EAD2] py-4 px-4 text-center">
+              <SentenceBlank q={q} solved={locked} />
+            </div>
+            <WordOptions options={q.options} correctId={locked ? q.word.id : null} wrong={wrong} onPick={pick} />
+          </div>
+        )}
+      </div>
+      {flight && <FlyingStar flight={flight} onDone={() => {
+        setFlight(null);
+        if (!attempted) { scoreRef.current += 1; setScore(scoreRef.current); }
+        Sfx.star();
+        window.setTimeout(() => {
+          if (qi + 1 < questions.length) { setQi(qi + 1); setAttempted(false); setWrong([]); setLocked(false); }
+          else onFinish(scoreRef.current);
+        }, 550);
+      }} />}
+      <ConfirmDialog open={askExit}
+        title="Leave the quiz?" titleAr="مغادرة الاختبار؟"
+        message="Your quiz progress will be lost." messageAr="سيتم فقدان تقدمك في الاختبار."
+        primaryLabel="Keep Playing" primaryLabelAr="أكمل الاختبار"
+        secondaryLabel="Leave" secondaryLabelAr="خروج"
+        onPrimary={() => setAskExit(false)}
+        onSecondary={() => { Speech.cancel(); onBack(); }} />
+    </div>
+  );
+}
+
+// ------------------- screens/ResultsScreen.tsx -------------------
+function StatMini({ label, labelAr, value, icon }: { label: string; labelAr: string; value: string; icon?: React.ReactNode }) {
+  return (
+    <div className="bg-white rounded-2xl shadow-card p-3 text-center">
+      {icon && <div className="flex justify-center">{icon}</div>}
+      <div className="text-3xl font-extrabold text-ink leading-none mt-0.5">{value}</div>
+      <div className="text-xs font-extrabold text-softink mt-1">{label}</div>
+      <div dir="rtl" className="font-ar text-xs font-bold text-softink">{labelAr}</div>
+    </div>
+  );
+}
+function ResultsScreen({ progress, score, onMap, onRequiz }: {
+  progress: AppProgress; score: number; onMap: () => void; onRequiz: () => void;
+}) {
+  const a = progress.categories.animals;
+  const totalStars = a.lessonStars + a.quizStars;
+  useEffect(() => {
+    Sfx.fanfare();
+    const t = window.setTimeout(() => {
+      if (progress.soundOn && Speech.supported) Speech.speak('Amazing! You are an Animal Explorer!', { rate: 0.9 });
+    }, 750);
+    return () => window.clearTimeout(t);
+  }, []);
+  return (
+    <div className="relative mx-auto w-full max-w-md px-5 py-6 pb-[calc(2rem+env(safe-area-inset-bottom))] min-h-screen flex flex-col">
+      <Confetti />
+      <div className="relative z-20 text-center anim-pop">
+        <div className="relative mx-auto w-44 h-44">
+          <span className="absolute top-2 left-6 w-7 h-7 text-orange anim-twinkle"><IconSparkle className="w-full h-full" /></span>
+          <span className="absolute top-8 right-3 w-5 h-5 text-teal anim-twinkle" style={{ animationDelay: '.3s' }}><IconSparkle className="w-full h-full" /></span>
+          <span className="absolute bottom-8 left-2 w-6 h-6 text-green anim-twinkle" style={{ animationDelay: '.6s' }}><IconSparkle className="w-full h-full" /></span>
+          <span className="absolute bottom-2 right-8 w-8 h-8 text-yellow anim-twinkle" style={{ animationDelay: '.9s' }}><IconSparkle className="w-full h-full" /></span>
+          <div className="absolute inset-0 grid place-items-center anim-star">
+            <IconStar className="w-36 h-36 text-yellow drop-shadow-lg" />
+          </div>
+        </div>
+        <h1 className="text-5xl font-extrabold text-ink mt-1">Amazing!</h1>
+        <p className="text-2xl font-extrabold text-orange-dark mt-1">Animals Completed!</p>
+        <p dir="rtl" className="font-ar text-xl font-bold text-softink">أكملت عالم الحيوانات!</p>
+      </div>
+      <div className="relative z-20 bg-white rounded-[2rem] shadow-card p-5 mt-6 flex items-center gap-4 anim-slide">
+        <div className="w-20 h-20 rounded-full bg-yellow-soft grid place-items-center shrink-0 border-4 border-yellow/60">
+          <IconTrophy className="w-10 h-10 text-[#C98A2D]" />
+        </div>
+        <div>
+          <div className="text-xs font-extrabold tracking-widest text-softink">AWARD</div>
+          <div className="text-2xl font-extrabold text-ink leading-tight">Animal Explorer</div>
+          <div dir="rtl" className="font-ar text-lg text-softink">مستكشف الحيوانات</div>
+        </div>
+      </div>
+      <div className="relative z-20 grid grid-cols-3 gap-3 mt-4 anim-slide">
+        <StatMini label="Words" labelAr="كلمات" value={`${a.wordsLearned.length}`} icon={<IconPaw className="w-6 h-6 text-orange" />} />
+        <StatMini label="Quiz" labelAr="اختبار" value={`${score}/10`} icon={<IconCheck className="w-6 h-6 text-green" />} />
+        <StatMini label="Stars" labelAr="نجوم" value={`${totalStars}`} icon={<IconStar className="w-6 h-6 text-[#E3A81E]" />} />
+      </div>
+      <div className="relative z-20 flex items-end gap-2 mt-6">
+        <div className="w-20 shrink-0 anim-bob"><HootArt expression="cheer" className="w-full" /></div>
+        <HootBubble className="flex-1 mb-3 text-lg font-bold">You are an Animal Explorer! 🦉⭐</HootBubble>
+      </div>
+      <div className="relative z-20 mt-auto pt-6 flex flex-col gap-3 items-center">
+        <BigButton size="lg" className="w-full" onClick={onMap}>Back to World Map <IconArrowRight className="w-6 h-6" /></BigButton>
+        {score < 10 && (
+          <button onClick={onRequiz} className="font-bold text-teal-dark text-lg active:opacity-60">
+            Try the quiz again · <span dir="rtl" className="font-ar">أعد الاختبار</span>
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ------------------- screens/ParentScreen.tsx -------------------
+function StatCard({ label, labelAr, value, sub, icon }: {
+  label: string; labelAr: string; value: string; sub?: string; icon?: React.ReactNode;
+}) {
+  return (
+    <div className="bg-white rounded-3xl shadow-card p-4">
+      <div className="flex items-center gap-1.5 text-softink font-extrabold text-sm">{icon}<span>{label}</span></div>
+      <div dir="rtl" className="font-ar text-xs text-softink font-bold">{labelAr}</div>
+      <div className="text-4xl font-extrabold text-ink mt-1.5 leading-none">{value}</div>
+      {sub && <div className="text-xs font-bold text-softink mt-1">{sub}</div>}
+    </div>
+  );
+}
+function WordRow({ word, learned }: { word: Word; learned: boolean }) {
+  return (
+    <div className="bg-white rounded-2xl shadow-card p-2.5 flex items-center gap-3">
+      <AnimalArt id={word.id} className="w-11 h-11 shrink-0" />
+      <div className="flex-1 min-w-0">
+        <div className="font-extrabold text-ink leading-none">{word.english}</div>
+        <div dir="rtl" className="font-ar text-sm text-softink font-bold">{word.arabic}</div>
+      </div>
+      <div className={`w-6 h-6 rounded-full grid place-items-center shrink-0 ${learned ? 'bg-green text-white' : 'bg-[#EFE5CE] text-[#B9A78F]'}`}>
+        <IconCheck className="w-3.5 h-3.5" />
+      </div>
+    </div>
+  );
+}
+function ToggleRow({ on, onToggle, label, labelAr }: { on: boolean; onToggle: () => void; label: string; labelAr: string }) {
+  return (
+    <button onClick={onToggle} aria-pressed={on} className="w-full bg-white rounded-2xl shadow-card p-4 flex items-center justify-between active:scale-[.99] transition-transform">
+      <div className="text-left">
+        <div className="font-extrabold text-ink">{label}</div>
+        <div dir="rtl" className="font-ar text-sm text-softink font-bold">{labelAr}</div>
+      </div>
+      <div className={`w-14 h-8 rounded-full p-1 transition-colors ${on ? 'bg-green' : 'bg-[#E5D8BE]'}`}>
+        <div className={`w-6 h-6 rounded-full bg-white shadow transition-transform ${on ? 'translate-x-6' : ''}`} />
+      </div>
+    </button>
+  );
+}
+function ParentScreen({ progress, onBack, onReset, onToggleSound, onStart }: {
+  progress: AppProgress; onBack: () => void; onReset: () => void; onToggleSound: () => void; onStart: () => void;
+}) {
+  const a = progress.categories.animals;
+  const words = WORDS_BY_CATEGORY.animals;
+  const learned = a.wordsLearned.length;
+  const totalStars = a.lessonStars + a.quizStars;
+  const hasProgress = learned > 0 || a.quizCompleted;
+  const [askReset, setAskReset] = useState(false);
+  const voiceReady = progress.soundOn && Speech.supported;
+  return (
+    <div className="mx-auto w-full max-w-2xl px-5 py-4 pb-[calc(2rem+env(safe-area-inset-bottom))] min-h-screen flex flex-col">
+      <div className="flex items-center gap-3">
+        <BackButton onClick={onBack} />
+        <div>
+          <h1 className="text-3xl font-extrabold text-ink leading-none">Parent Progress</h1>
+          <p dir="rtl" className="font-ar text-softink font-bold mt-1">تقدم التعلم — محفوظ على هذا الجهاز</p>
+        </div>
+      </div>
+      {!hasProgress ? (
+        <div className="bg-white rounded-[2rem] shadow-card p-8 text-center mt-8 anim-pop">
+          <div className="w-24 mx-auto anim-bob"><HootArt expression="wink" className="w-full" /></div>
+          <h2 className="text-2xl font-extrabold text-ink mt-3">No progress yet</h2>
+          <p dir="rtl" className="font-ar text-lg text-softink font-bold">لم يبدأ التعلم بعد</p>
+          <p className="text-softink font-bold mt-2">Start the Animals lesson to see progress here.</p>
+          <BigButton className="mt-5" onClick={onStart}>Start Learning</BigButton>
+        </div>
+      ) : (
+        <>
+          <div className="grid grid-cols-2 gap-3 mt-6">
+            <StatCard label="Words Learned" labelAr="الكلمات المتعلمة" value={`${learned}`} sub="out of 100 words" icon={<IconPaw className="w-4 h-4" />} />
+            <StatCard label="Quiz Score" labelAr="نتيجة الاختبار" value={a.quizCompleted ? `${a.quizBestScore}/10` : '—'} sub="Animals quiz" />
+            <StatCard label="Stars" labelAr="النجوم" value={`${totalStars}`} icon={<IconStar className="w-4 h-4 text-[#C9A227]" />} />
+            <StatCard label="Current Level" labelAr="المستوى الحالي" value="Level 1" sub="Animals" />
+          </div>
+          <h2 className="text-xl font-extrabold text-ink mt-8">Completed Lessons <span dir="rtl" className="font-ar text-base text-softink">· الدروس المكتملة</span></h2>
+          <div className="bg-white rounded-3xl shadow-card p-4 flex items-center gap-3 mt-3">
+            <div className="w-14 h-14 rounded-2xl bg-orange-soft grid place-items-center shrink-0"><IconPaw className="w-8 h-8 text-orange" /></div>
+            <div className="flex-1 min-w-0">
+              <div className="font-extrabold text-lg text-ink">Animals <span dir="rtl" className="font-ar text-sm text-softink">الحيوانات</span></div>
+              <div className="text-sm font-bold text-softink">
+                {learned}/10 words · {a.quizCompleted ? `Quiz best ${a.quizBestScore}/10` : 'Quiz not taken yet'}
+              </div>
+            </div>
+            {a.badge ? (
+              <div className="hidden sm:flex items-center gap-1.5 bg-yellow-soft border-2 border-yellow/60 rounded-full px-3 py-1.5 shrink-0">
+                <IconTrophy className="w-5 h-5 text-[#C98A2D]" />
+                <span className="text-xs font-extrabold text-[#A87E1C]">Animal Explorer</span>
+              </div>
+            ) : (
+              <span className="text-xs font-extrabold text-softink bg-[#F4EBD8] rounded-full px-3 py-1.5 shrink-0">In progress</span>
+            )}
+          </div>
+          {a.badge && (
+            <div className="sm:hidden flex items-center gap-1.5 bg-yellow-soft border-2 border-yellow/60 rounded-full px-3 py-1.5 mt-2 self-start">
+              <IconTrophy className="w-5 h-5 text-[#C98A2D]" />
+              <span className="text-xs font-extrabold text-[#A87E1C]">Animal Explorer</span>
+            </div>
+          )}
+          <h2 className="text-xl font-extrabold text-ink mt-8">Words <span dir="rtl" className="font-ar text-base text-softink">· الكلمات</span></h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mt-3">
+            {words.map(w => <WordRow key={w.id} word={w} learned={a.wordsLearned.includes(w.id)} />)}
+          </div>
+          <h2 className="text-xl font-extrabold text-ink mt-8">Settings <span dir="rtl" className="font-ar text-base text-softink">· الإعدادات</span></h2>
+          <div className="mt-3 space-y-3">
+            <ToggleRow on={progress.soundOn} onToggle={onToggleSound} label="Sound & voice" labelAr="الصوت والنطق" />
+            <button onClick={() => Speech.sayWordAndSentence(WORDS_ANIMALS[0])} disabled={!voiceReady}
+              aria-label="Test the English voice"
+              className={`w-full bg-white rounded-2xl shadow-card p-4 flex items-center justify-center gap-2 font-extrabold text-teal-dark border-2 border-[#D7EBEE] active:scale-[.98] transition-transform ${!voiceReady ? 'opacity-50' : ''}`}>
+              <IconSpeaker className="w-5 h-5" /> Test the voice
+              <span className="opacity-40">·</span><span dir="rtl" className="font-ar">اختبر الصوت</span>
+            </button>
+            <p className="text-xs font-bold text-[#B9A78F] px-1 leading-relaxed">
+              Words and sentences use your device&rsquo;s built-in English voice · <span dir="rtl" className="font-ar">الصوت يعمل بمحرك النطق المدمج في الجهاز</span>
+            </p>
+            <button onClick={() => setAskReset(true)}
+              className="w-full bg-white rounded-2xl shadow-card p-4 flex items-center justify-center gap-2 text-[#C0504A] font-extrabold border-2 border-[#F5D9D6] active:scale-[.98] transition-transform">
+              <IconRefresh className="w-5 h-5" /> Reset progress <span dir="rtl" className="font-ar">إعادة تعيين التقدم</span>
+            </button>
+          </div>
+        </>
+      )}
+      <ConfirmDialog open={askReset}
+        title="Reset progress?" titleAr="إعادة تعيين التقدم؟"
+        message="This will erase all stars, words and quiz results on this device."
+        messageAr="سيتم حذف كل النجوم والكلمات ونتائج الاختبار على هذا الجهاز."
+        primaryLabel="Reset" primaryLabelAr="نعم، إعادة التعيين"
+        secondaryLabel="Cancel" secondaryLabelAr="إلغاء"
+        onPrimary={() => { setAskReset(false); onReset(); }}
+        onSecondary={() => setAskReset(false)} />
+    </div>
+  );
+}
+
+// ------------------- App.tsx -------------------
+type Screen = 'home' | 'map' | 'lesson' | 'quiz' | 'results' | 'parent';
+function App() {
+  const [progress, setProgress] = useState<AppProgress>(() => progressStore.load());
+  const [screen, setScreen] = useState<Screen>('home');
+  const [toast, setToast] = useState<{ en: string; ar: string } | null>(null);
+  const [lastQuizScore, setLastQuizScore] = useState(0);
+  const toastTimer = useRef<number>(0);
+
+  useEffect(() => { progressStore.save(progress); }, [progress]);
+  useEffect(() => { Speech.init(); }, []);
+  useEffect(() => { Sfx.enabled = progress.soundOn; }, [progress.soundOn]);
+  useEffect(() => {
+    const unlock = () => { Sfx.ensure(); };
+    window.addEventListener('pointerdown', unlock, { once: true, capture: true } as any);
+    return () => window.removeEventListener('pointerdown', unlock, { capture: true } as any);
+  }, []);
+
+  const showToast = useCallback((en: string, ar: string) => {
+    setToast({ en, ar });
+    window.clearTimeout(toastTimer.current);
+    toastTimer.current = window.setTimeout(() => setToast(null), 2600);
+  }, []);
+
+  const go = useCallback((s: Screen) => {
+    Speech.cancel();
+    setScreen(s);
+  }, []);
+
+  const speakText = useCallback((text: string, opts?: { rate?: number }): boolean => {
+    if (!progress.soundOn) { showToast('Sound is turned off', 'الصوت مغلق'); return false; }
+    if (!Speech.supported) { showToast('Audio is not available on this device', 'الصوت غير متاح على هذا الجهاز'); return false; }
+    return Speech.speak(text, opts);
+  }, [progress.soundOn, showToast]);
+
+  const sayWord = useCallback((word: Word): boolean => {
+    if (!progress.soundOn) { showToast('Sound is turned off', 'الصوت مغلق'); return false; }
+    const ok = Speech.sayWord(word);
+    if (!ok) showToast('Audio is not available on this device', 'الصوت غير متاح على هذا الجهاز');
+    return ok;
+  }, [progress.soundOn, showToast]);
+
+  const sayWordAndSentence = useCallback((word: Word): boolean => {
+    if (!progress.soundOn) { showToast('Sound is turned off', 'الصوت مغلق'); return false; }
+    const ok = Speech.sayWordAndSentence(word);
+    if (!ok) showToast('Audio is not available on this device', 'الصوت غير متاح على هذا الجهاز');
+    return ok;
+  }, [progress.soundOn, showToast]);
+
+  const completeWord = useCallback((wordId: string) => {
+    setProgress(p => {
+      const a = p.categories.animals;
+      if (a.wordsLearned.includes(wordId)) return p;
+      return { ...p, categories: { ...p.categories, animals: { ...a, wordsLearned: [...a.wordsLearned, wordId], lessonStars: a.lessonStars + 1 } } };
+    });
+  }, []);
+
+  const finishQuiz = useCallback((score: number) => {
+    setLastQuizScore(score);
+    setProgress(p => {
+      const a = p.categories.animals;
+      const all = a.wordsLearned.length >= 10;
+      return { ...p, categories: { ...p.categories, animals: { ...a, quizCompleted: true, quizBestScore: Math.max(a.quizBestScore, score), quizStars: Math.max(a.quizStars, score), badge: true, completed: all } } };
+    });
+    go('results');
+  }, [go]);
+
+  const resetProgress = useCallback(() => {
+    Speech.cancel();
+    setProgress(defaultProgress());
+    showToast('Progress has been reset', 'تمت إعادة تعيين التقدم');
+  }, [showToast]);
+
+  const animals = progress.categories.animals;
+  const words = WORDS_BY_CATEGORY.animals;
+  const openAnimals = () => {
+    if (animals.wordsLearned.length < 10) go('lesson');
+    else if (!animals.quizCompleted) go('quiz');
+    else go('lesson');
+  };
+  const homePrimary = () => {
+    if (animals.wordsLearned.length < 10) go('lesson');
+    else if (!animals.quizCompleted) go('quiz');
+    else go('map');
+  };
+  const toggleSound = () => {
+    if (progress.soundOn) Speech.cancel();
+    setProgress(p => ({ ...p, soundOn: !p.soundOn }));
+  };
+
+  return (
+    <div className="min-h-screen">
+      <div key={screen} className="anim-screen min-h-screen">
+        {screen === 'home' && (
+          <HomeScreen progress={progress} speakText={speakText}
+            onPrimary={homePrimary} onOpenCard={() => go('map')}
+            onParent={() => go('parent')} onToggleSound={toggleSound} />
+        )}
+        {screen === 'map' && (
+          <WorldMapScreen progress={progress} onBack={() => go('home')}
+            onSelectAnimals={openAnimals}
+            onTryLocked={() => showToast('Complete Animals to unlock the next world!', 'أكمل عالم الحيوانات لفتح العالم التالي!')}
+            onTryFuture={() => showToast('Food is coming in the next adventure!', 'عالم الطعام قادم في المغامرة القادمة!')} />
+        )}
+        {screen === 'lesson' && (
+          <LessonScreen words={words} learnedIds={animals.wordsLearned}
+            quizDone={animals.quizCompleted} soundOn={progress.soundOn}
+            sayWord={sayWord} sayWordAndSentence={sayWordAndSentence}
+            onBack={() => go('map')} onWordComplete={completeWord}
+            onFinish={target => go(target === 'quiz' ? 'quiz' : 'map')} />
+        )}
+        {screen === 'quiz' && (
+          <QuizScreen words={words} soundOn={progress.soundOn} sayWord={sayWord}
+            onBack={() => go('map')} onFinish={finishQuiz} />
+        )}
+        {screen === 'results' && (
+          <ResultsScreen progress={progress} score={lastQuizScore}
+            onMap={() => go('map')} onRequiz={() => go('quiz')} />
+        )}
+        {screen === 'parent' && (
+          <ParentScreen progress={progress} onBack={() => go('home')}
+            onReset={resetProgress} onToggleSound={toggleSound} onStart={homePrimary} />
+        )}
+      </div>
+      <Toast toast={toast} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(<App />);
+</script>
+</body>
+</html>
